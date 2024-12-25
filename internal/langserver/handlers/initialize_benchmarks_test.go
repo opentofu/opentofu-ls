@@ -18,13 +18,13 @@ import (
 	"github.com/hashicorp/hc-install/releases"
 	"github.com/hashicorp/hc-install/src"
 	"github.com/hashicorp/terraform-exec/tfexec"
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/langserver"
-	"github.com/hashicorp/terraform-ls/internal/langserver/session"
-	"github.com/hashicorp/terraform-ls/internal/state"
-	"github.com/hashicorp/terraform-ls/internal/terraform/discovery"
-	"github.com/hashicorp/terraform-ls/internal/terraform/exec"
-	"github.com/hashicorp/terraform-ls/internal/walker"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/langserver"
+	"github.com/opentofu/opentofu-ls/internal/langserver/session"
+	"github.com/opentofu/opentofu-ls/internal/state"
+	"github.com/opentofu/opentofu-ls/internal/terraform/discovery"
+	"github.com/opentofu/opentofu-ls/internal/terraform/exec"
+	"github.com/opentofu/opentofu-ls/internal/walker"
 )
 
 func BenchmarkInitializeFolder_basic(b *testing.B) {

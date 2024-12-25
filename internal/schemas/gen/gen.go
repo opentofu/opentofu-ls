@@ -32,9 +32,9 @@ import (
 	"github.com/hashicorp/hc-install/src"
 	"github.com/hashicorp/terraform-exec/tfexec"
 	tfjson "github.com/hashicorp/terraform-json"
-	lsctx "github.com/hashicorp/terraform-ls/internal/context"
-	"github.com/hashicorp/terraform-ls/internal/registry"
 	tfaddr "github.com/hashicorp/terraform-registry-address"
+	lsctx "github.com/opentofu/opentofu-ls/internal/context"
+	"github.com/opentofu/opentofu-ls/internal/registry"
 )
 
 var terraformVersion = version.MustConstraints(version.NewConstraint("~> 1.0"))

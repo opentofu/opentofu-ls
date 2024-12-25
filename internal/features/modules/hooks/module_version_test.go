@@ -16,11 +16,11 @@ import (
 	"github.com/hashicorp/hcl-lang/decoder"
 	"github.com/hashicorp/hcl-lang/lang"
 	"github.com/hashicorp/hcl/v2"
-	"github.com/hashicorp/terraform-ls/internal/features/modules/state"
-	"github.com/hashicorp/terraform-ls/internal/registry"
-	globalState "github.com/hashicorp/terraform-ls/internal/state"
 	tfaddr "github.com/hashicorp/terraform-registry-address"
 	tfmod "github.com/hashicorp/terraform-schema/module"
+	"github.com/opentofu/opentofu-ls/internal/features/modules/state"
+	"github.com/opentofu/opentofu-ls/internal/registry"
+	globalState "github.com/opentofu/opentofu-ls/internal/state"
 	"github.com/zclconf/go-cty/cty"
 )
 

@@ -7,9 +7,9 @@ package lsp
 
 import (
 	"github.com/hashicorp/hcl-lang/lang"
-	"github.com/hashicorp/terraform-ls/internal/lsp/semtok"
-	lsp "github.com/hashicorp/terraform-ls/internal/protocol"
 	tfschema "github.com/hashicorp/terraform-schema/schema"
+	"github.com/opentofu/opentofu-ls/internal/lsp/semtok"
+	lsp "github.com/opentofu/opentofu-ls/internal/protocol"
 )
 
 // Registering types which are actually in use

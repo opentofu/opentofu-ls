@@ -10,15 +10,15 @@ import (
 	"path/filepath"
 	"testing"
 
-	lsctx "github.com/hashicorp/terraform-ls/internal/context"
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/features/variables/state"
-	"github.com/hashicorp/terraform-ls/internal/filesystem"
-	ilsp "github.com/hashicorp/terraform-ls/internal/lsp"
-	globalState "github.com/hashicorp/terraform-ls/internal/state"
-	"github.com/hashicorp/terraform-ls/internal/terraform/ast"
-	"github.com/hashicorp/terraform-ls/internal/uri"
 	tfmod "github.com/hashicorp/terraform-schema/module"
+	lsctx "github.com/opentofu/opentofu-ls/internal/context"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/features/variables/state"
+	"github.com/opentofu/opentofu-ls/internal/filesystem"
+	ilsp "github.com/opentofu/opentofu-ls/internal/lsp"
+	globalState "github.com/opentofu/opentofu-ls/internal/state"
+	"github.com/opentofu/opentofu-ls/internal/terraform/ast"
+	"github.com/opentofu/opentofu-ls/internal/uri"
 )
 
 type ModuleReaderMock struct{}

@@ -7,8 +7,8 @@ package lsp
 
 import (
 	"github.com/hashicorp/hcl-lang/lang"
-	"github.com/hashicorp/terraform-ls/internal/document"
-	lsp "github.com/hashicorp/terraform-ls/internal/protocol"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	lsp "github.com/opentofu/opentofu-ls/internal/protocol"
 )
 
 func TextEditsFromDocumentChanges(changes document.Changes) []lsp.TextEdit {

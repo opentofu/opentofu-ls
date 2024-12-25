@@ -8,11 +8,11 @@ package handlers
 import (
 	"context"
 
-	lsctx "github.com/hashicorp/terraform-ls/internal/context"
-	"github.com/hashicorp/terraform-ls/internal/langserver/cmd"
-	"github.com/hashicorp/terraform-ls/internal/langserver/handlers/command"
-	ilsp "github.com/hashicorp/terraform-ls/internal/lsp"
-	lsp "github.com/hashicorp/terraform-ls/internal/protocol"
+	lsctx "github.com/opentofu/opentofu-ls/internal/context"
+	"github.com/opentofu/opentofu-ls/internal/langserver/cmd"
+	"github.com/opentofu/opentofu-ls/internal/langserver/handlers/command"
+	ilsp "github.com/opentofu/opentofu-ls/internal/lsp"
+	lsp "github.com/opentofu/opentofu-ls/internal/protocol"
 )
 
 func (svc *service) TextDocumentDidSave(ctx context.Context, params lsp.DidSaveTextDocumentParams) error {

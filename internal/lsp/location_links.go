@@ -9,8 +9,8 @@ import (
 	"path/filepath"
 
 	"github.com/hashicorp/hcl-lang/decoder"
-	lsp "github.com/hashicorp/terraform-ls/internal/protocol"
-	"github.com/hashicorp/terraform-ls/internal/uri"
+	lsp "github.com/opentofu/opentofu-ls/internal/protocol"
+	"github.com/opentofu/opentofu-ls/internal/uri"
 )
 
 func RefTargetsToDefinitionLocationLinks(targets decoder.ReferenceTargets, defCaps *lsp.DefinitionClientCapabilities) interface{} {

@@ -19,16 +19,16 @@ import (
 	"github.com/hashicorp/go-version"
 	"github.com/hashicorp/hcl-lang/lang"
 	tfjson "github.com/hashicorp/terraform-json"
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/features/modules/state"
-	"github.com/hashicorp/terraform-ls/internal/job"
-	"github.com/hashicorp/terraform-ls/internal/registry"
-	"github.com/hashicorp/terraform-ls/internal/schemas"
-	globalState "github.com/hashicorp/terraform-ls/internal/state"
-	op "github.com/hashicorp/terraform-ls/internal/terraform/module/operation"
 	tfaddr "github.com/hashicorp/terraform-registry-address"
 	tfregistry "github.com/hashicorp/terraform-schema/registry"
 	tfschema "github.com/hashicorp/terraform-schema/schema"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/features/modules/state"
+	"github.com/opentofu/opentofu-ls/internal/job"
+	"github.com/opentofu/opentofu-ls/internal/registry"
+	"github.com/opentofu/opentofu-ls/internal/schemas"
+	globalState "github.com/opentofu/opentofu-ls/internal/state"
+	op "github.com/opentofu/opentofu-ls/internal/terraform/module/operation"
 	"github.com/zclconf/go-cty/cty"
 	ctyjson "github.com/zclconf/go-cty/cty/json"
 	"go.opentelemetry.io/otel"
@@ -37,7 +37,7 @@ import (
 	"go.opentelemetry.io/otel/trace"
 )
 
-const tracerName = "github.com/hashicorp/terraform-ls/internal/terraform/module"
+const tracerName = "github.com/opentofu/opentofu-ls/internal/terraform/module"
 
 // PreloadEmbeddedSchema loads provider schemas based on
 // provider requirements parsed earlier via [LoadModuleMetadata].

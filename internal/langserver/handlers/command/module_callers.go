@@ -11,8 +11,8 @@ import (
 	"sort"
 
 	"github.com/creachadair/jrpc2"
-	"github.com/hashicorp/terraform-ls/internal/langserver/cmd"
-	"github.com/hashicorp/terraform-ls/internal/uri"
+	"github.com/opentofu/opentofu-ls/internal/langserver/cmd"
+	"github.com/opentofu/opentofu-ls/internal/uri"
 )
 
 const moduleCallersVersion = 0

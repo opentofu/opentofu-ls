@@ -10,12 +10,12 @@ import (
 	"fmt"
 
 	"github.com/creachadair/jrpc2"
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/job"
-	"github.com/hashicorp/terraform-ls/internal/langserver/cmd"
-	"github.com/hashicorp/terraform-ls/internal/langserver/progress"
-	op "github.com/hashicorp/terraform-ls/internal/terraform/module/operation"
-	"github.com/hashicorp/terraform-ls/internal/uri"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/job"
+	"github.com/opentofu/opentofu-ls/internal/langserver/cmd"
+	"github.com/opentofu/opentofu-ls/internal/langserver/progress"
+	op "github.com/opentofu/opentofu-ls/internal/terraform/module/operation"
+	"github.com/opentofu/opentofu-ls/internal/uri"
 )
 
 func (h *CmdHandler) TerraformValidateHandler(ctx context.Context, args cmd.CommandArgs) (interface{}, error) {

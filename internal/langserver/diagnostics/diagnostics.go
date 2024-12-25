@@ -12,10 +12,10 @@ import (
 	"sync"
 
 	"github.com/hashicorp/hcl/v2"
-	ilsp "github.com/hashicorp/terraform-ls/internal/lsp"
-	lsp "github.com/hashicorp/terraform-ls/internal/protocol"
-	"github.com/hashicorp/terraform-ls/internal/terraform/ast"
-	"github.com/hashicorp/terraform-ls/internal/uri"
+	ilsp "github.com/opentofu/opentofu-ls/internal/lsp"
+	lsp "github.com/opentofu/opentofu-ls/internal/protocol"
+	"github.com/opentofu/opentofu-ls/internal/terraform/ast"
+	"github.com/opentofu/opentofu-ls/internal/uri"
 )
 
 type diagContext struct {

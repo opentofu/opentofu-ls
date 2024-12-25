@@ -7,8 +7,8 @@ package lsp
 
 import (
 	"github.com/hashicorp/hcl/v2"
-	"github.com/hashicorp/terraform-ls/internal/document"
-	lsp "github.com/hashicorp/terraform-ls/internal/protocol"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	lsp "github.com/opentofu/opentofu-ls/internal/protocol"
 )
 
 func HCLPositionFromLspPosition(pos lsp.Position, doc *document.Document) (hcl.Pos, error) {

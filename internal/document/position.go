@@ -10,7 +10,7 @@ import (
 	"unicode/utf8"
 
 	"github.com/apparentlymart/go-textseg/textseg"
-	"github.com/hashicorp/terraform-ls/internal/source"
+	"github.com/opentofu/opentofu-ls/internal/source"
 )
 
 func ByteOffsetForPos(lines source.Lines, pos Pos) (int, error) {

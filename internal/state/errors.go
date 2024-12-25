@@ -8,8 +8,8 @@ package state
 import (
 	"fmt"
 
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/job"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/job"
 )
 
 type AlreadyExistsError struct {

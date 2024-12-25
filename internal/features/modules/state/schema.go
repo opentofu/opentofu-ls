@@ -10,7 +10,7 @@ import (
 	"log"
 
 	"github.com/hashicorp/go-memdb"
-	globalState "github.com/hashicorp/terraform-ls/internal/state"
+	globalState "github.com/opentofu/opentofu-ls/internal/state"
 )
 
 const (

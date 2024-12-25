@@ -18,10 +18,10 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	lsctx "github.com/hashicorp/terraform-ls/internal/context"
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/job"
-	"github.com/hashicorp/terraform-ls/internal/state"
+	lsctx "github.com/opentofu/opentofu-ls/internal/context"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/job"
+	"github.com/opentofu/opentofu-ls/internal/state"
 )
 
 func TestScheduler_withIgnoreExistingState(t *testing.T) {

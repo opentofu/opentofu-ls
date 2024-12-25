@@ -10,8 +10,8 @@ import (
 
 	"github.com/hashicorp/hcl-lang/decoder"
 	"github.com/hashicorp/hcl-lang/lang"
-	lsp "github.com/hashicorp/terraform-ls/internal/protocol"
-	"github.com/hashicorp/terraform-ls/internal/uri"
+	lsp "github.com/opentofu/opentofu-ls/internal/protocol"
+	"github.com/opentofu/opentofu-ls/internal/uri"
 	"github.com/zclconf/go-cty/cty"
 )
 

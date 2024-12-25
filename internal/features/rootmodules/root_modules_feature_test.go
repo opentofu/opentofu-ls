@@ -11,10 +11,10 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/hashicorp/go-version"
-	"github.com/hashicorp/terraform-ls/internal/eventbus"
-	"github.com/hashicorp/terraform-ls/internal/filesystem"
-	globalState "github.com/hashicorp/terraform-ls/internal/state"
-	"github.com/hashicorp/terraform-ls/internal/terraform/exec"
+	"github.com/opentofu/opentofu-ls/internal/eventbus"
+	"github.com/opentofu/opentofu-ls/internal/filesystem"
+	globalState "github.com/opentofu/opentofu-ls/internal/state"
+	"github.com/opentofu/opentofu-ls/internal/terraform/exec"
 )
 
 func TestRootModulesFeature_TerraformVersion(t *testing.T) {

@@ -15,8 +15,8 @@ import (
 	"github.com/hashicorp/hcl-lang/lang"
 	"github.com/hashicorp/hcl-lang/reference"
 	"github.com/hashicorp/hcl/v2"
-	ilsp "github.com/hashicorp/terraform-ls/internal/lsp"
-	lsp "github.com/hashicorp/terraform-ls/internal/protocol"
+	ilsp "github.com/opentofu/opentofu-ls/internal/lsp"
+	lsp "github.com/opentofu/opentofu-ls/internal/protocol"
 )
 
 func ReferenceCount(showReferencesCmdId string) lang.CodeLensFunc {

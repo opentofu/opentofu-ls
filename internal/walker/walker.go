@@ -14,8 +14,8 @@ import (
 	"log"
 	"path/filepath"
 
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/eventbus"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/eventbus"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/codes"
@@ -58,7 +58,7 @@ type PathStore interface {
 	RemoveDir(dir document.DirHandle) error
 }
 
-const tracerName = "github.com/hashicorp/terraform-ls/internal/walker"
+const tracerName = "github.com/opentofu/opentofu-ls/internal/walker"
 
 func NewWalker(fs fs.ReadDirFS, pathStore PathStore, eventBus *eventbus.EventBus) *Walker {
 	return &Walker{

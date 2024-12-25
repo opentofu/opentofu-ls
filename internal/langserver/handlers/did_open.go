@@ -10,10 +10,10 @@ import (
 	"fmt"
 
 	"github.com/creachadair/jrpc2"
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/eventbus"
-	lsp "github.com/hashicorp/terraform-ls/internal/protocol"
-	"github.com/hashicorp/terraform-ls/internal/uri"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/eventbus"
+	lsp "github.com/opentofu/opentofu-ls/internal/protocol"
+	"github.com/opentofu/opentofu-ls/internal/uri"
 )
 
 func (svc *service) TextDocumentDidOpen(ctx context.Context, params lsp.DidOpenTextDocumentParams) error {

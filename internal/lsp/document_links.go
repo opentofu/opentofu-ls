@@ -7,7 +7,7 @@ package lsp
 
 import (
 	"github.com/hashicorp/hcl-lang/lang"
-	lsp "github.com/hashicorp/terraform-ls/internal/protocol"
+	lsp "github.com/opentofu/opentofu-ls/internal/protocol"
 )
 
 func Links(links []lang.Link, caps *lsp.DocumentLinkClientCapabilities) []lsp.DocumentLink {

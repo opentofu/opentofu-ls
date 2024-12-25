@@ -9,7 +9,7 @@ import (
 	"strings"
 
 	"github.com/hashicorp/hcl/v2"
-	globalAst "github.com/hashicorp/terraform-ls/internal/terraform/ast"
+	globalAst "github.com/opentofu/opentofu-ls/internal/terraform/ast"
 )
 
 type VarsFilename string

@@ -9,9 +9,9 @@ import (
 	"context"
 
 	"github.com/hashicorp/hcl-lang/decoder"
-	ilsp "github.com/hashicorp/terraform-ls/internal/lsp"
-	"github.com/hashicorp/terraform-ls/internal/mdplain"
-	lsp "github.com/hashicorp/terraform-ls/internal/protocol"
+	ilsp "github.com/opentofu/opentofu-ls/internal/lsp"
+	"github.com/opentofu/opentofu-ls/internal/mdplain"
+	lsp "github.com/opentofu/opentofu-ls/internal/protocol"
 )
 
 func (svc *service) CompletionItemResolve(ctx context.Context, params lsp.CompletionItemWithResolveHook) (lsp.CompletionItemWithResolveHook, error) {

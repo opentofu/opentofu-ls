@@ -12,18 +12,18 @@ import (
 	"path/filepath"
 
 	"github.com/hashicorp/go-multierror"
-	lsctx "github.com/hashicorp/terraform-ls/internal/context"
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/features/modules/ast"
-	"github.com/hashicorp/terraform-ls/internal/features/modules/jobs"
-	"github.com/hashicorp/terraform-ls/internal/job"
-	"github.com/hashicorp/terraform-ls/internal/protocol"
-	"github.com/hashicorp/terraform-ls/internal/schemas"
-	globalState "github.com/hashicorp/terraform-ls/internal/state"
-	globalAst "github.com/hashicorp/terraform-ls/internal/terraform/ast"
-	op "github.com/hashicorp/terraform-ls/internal/terraform/module/operation"
 	tfaddr "github.com/hashicorp/terraform-registry-address"
 	tfmod "github.com/hashicorp/terraform-schema/module"
+	lsctx "github.com/opentofu/opentofu-ls/internal/context"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/features/modules/ast"
+	"github.com/opentofu/opentofu-ls/internal/features/modules/jobs"
+	"github.com/opentofu/opentofu-ls/internal/job"
+	"github.com/opentofu/opentofu-ls/internal/protocol"
+	"github.com/opentofu/opentofu-ls/internal/schemas"
+	globalState "github.com/opentofu/opentofu-ls/internal/state"
+	globalAst "github.com/opentofu/opentofu-ls/internal/terraform/ast"
+	op "github.com/opentofu/opentofu-ls/internal/terraform/module/operation"
 )
 
 func (f *ModulesFeature) discover(path string, files []string) error {
@@ -258,7 +258,7 @@ func (f *ModulesFeature) decodeModule(ctx context.Context, dir document.DirHandl
 	// Changes to a setting currently requires a LS restart, so the LS
 	// setting context cannot change during the execution of a job. That's
 	// why we can extract it here and use it in Defer.
-	// See https://github.com/hashicorp/terraform-ls/issues/1008
+	// See https://github.com/opentofu/opentofu-ls/issues/1008
 	// We can safely ignore the error here. If we can't get the options from
 	// the context, validationOptions.EnableEnhancedValidation will be false
 	// by default. So we don't run the validation jobs.

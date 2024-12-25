@@ -8,14 +8,14 @@ package jobs
 import (
 	"context"
 
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/features/rootmodules/state"
-	"github.com/hashicorp/terraform-ls/internal/job"
-	globalState "github.com/hashicorp/terraform-ls/internal/state"
-	"github.com/hashicorp/terraform-ls/internal/terraform/module"
-	op "github.com/hashicorp/terraform-ls/internal/terraform/module/operation"
 	tfaddr "github.com/hashicorp/terraform-registry-address"
 	tfschema "github.com/hashicorp/terraform-schema/schema"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/features/rootmodules/state"
+	"github.com/opentofu/opentofu-ls/internal/job"
+	globalState "github.com/opentofu/opentofu-ls/internal/state"
+	"github.com/opentofu/opentofu-ls/internal/terraform/module"
+	op "github.com/opentofu/opentofu-ls/internal/terraform/module/operation"
 )
 
 // ObtainSchema obtains provider schemas via Terraform CLI.

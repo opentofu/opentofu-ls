@@ -8,7 +8,7 @@ package job
 import (
 	"context"
 
-	"github.com/hashicorp/terraform-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/document"
 )
 
 type Job struct {

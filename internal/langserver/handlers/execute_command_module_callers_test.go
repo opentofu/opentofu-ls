@@ -12,13 +12,13 @@ import (
 	"testing"
 
 	"github.com/creachadair/jrpc2"
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/langserver"
-	"github.com/hashicorp/terraform-ls/internal/langserver/cmd"
-	"github.com/hashicorp/terraform-ls/internal/state"
-	"github.com/hashicorp/terraform-ls/internal/terraform/exec"
-	"github.com/hashicorp/terraform-ls/internal/uri"
-	"github.com/hashicorp/terraform-ls/internal/walker"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/langserver"
+	"github.com/opentofu/opentofu-ls/internal/langserver/cmd"
+	"github.com/opentofu/opentofu-ls/internal/state"
+	"github.com/opentofu/opentofu-ls/internal/terraform/exec"
+	"github.com/opentofu/opentofu-ls/internal/uri"
+	"github.com/opentofu/opentofu-ls/internal/walker"
 	"github.com/stretchr/testify/mock"
 )
 

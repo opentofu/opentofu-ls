@@ -23,8 +23,8 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/hashicorp/hcl-lang/decoder"
 	"github.com/hashicorp/hcl-lang/lang"
-	"github.com/hashicorp/terraform-ls/internal/features/modules/state"
-	globalState "github.com/hashicorp/terraform-ls/internal/state"
+	"github.com/opentofu/opentofu-ls/internal/features/modules/state"
+	globalState "github.com/opentofu/opentofu-ls/internal/state"
 	"github.com/zclconf/go-cty/cty"
 )
 

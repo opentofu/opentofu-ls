@@ -8,7 +8,7 @@ package eventbus
 import (
 	"context"
 
-	"github.com/hashicorp/terraform-ls/internal/protocol"
+	"github.com/opentofu/opentofu-ls/internal/protocol"
 )
 
 // DidChangeWatchedEvent is the event that is emitted when a client notifies

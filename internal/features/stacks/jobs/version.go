@@ -11,14 +11,14 @@ import (
 	"strings"
 
 	"github.com/hashicorp/go-version"
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/features/stacks/state"
-	"github.com/hashicorp/terraform-ls/internal/job"
-	"github.com/hashicorp/terraform-ls/internal/terraform/module/operation"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/features/stacks/state"
+	"github.com/opentofu/opentofu-ls/internal/job"
+	"github.com/opentofu/opentofu-ls/internal/terraform/module/operation"
 )
 
 // TODO: find a place to register a watcher for this .terraform-version file (put this in a follow-up issue), for now reloading the window is okay enough
-// https://github.com/hashicorp/terraform-ls/blob/c47b2e51a0ca08628a596eca8d5cd11d005b7d87/internal/langserver/handlers/initialized.go#L25
+// https://github.com/opentofu/opentofu-ls/blob/c47b2e51a0ca08628a596eca8d5cd11d005b7d87/internal/langserver/handlers/initialized.go#L25
 
 // LoadTerraformVersion loads the terraform version from the .terraform-version
 // file in the stack directory.

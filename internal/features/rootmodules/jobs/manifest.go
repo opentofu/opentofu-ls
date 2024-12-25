@@ -9,11 +9,11 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/features/rootmodules/state"
-	"github.com/hashicorp/terraform-ls/internal/job"
-	"github.com/hashicorp/terraform-ls/internal/terraform/datadir"
-	op "github.com/hashicorp/terraform-ls/internal/terraform/module/operation"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/features/rootmodules/state"
+	"github.com/opentofu/opentofu-ls/internal/job"
+	"github.com/opentofu/opentofu-ls/internal/terraform/datadir"
+	op "github.com/opentofu/opentofu-ls/internal/terraform/module/operation"
 )
 
 // ParseModuleManifest parses the "module manifest" which

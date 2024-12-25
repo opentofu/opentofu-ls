@@ -6,7 +6,7 @@
 package document
 
 import (
-	"github.com/hashicorp/terraform-ls/internal/uri"
+	"github.com/opentofu/opentofu-ls/internal/uri"
 )
 
 // DirHandle represents a directory location

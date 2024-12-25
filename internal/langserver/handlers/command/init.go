@@ -10,12 +10,12 @@ import (
 	"fmt"
 
 	"github.com/creachadair/jrpc2"
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/langserver/cmd"
-	"github.com/hashicorp/terraform-ls/internal/langserver/errors"
-	"github.com/hashicorp/terraform-ls/internal/langserver/progress"
-	"github.com/hashicorp/terraform-ls/internal/terraform/module"
-	"github.com/hashicorp/terraform-ls/internal/uri"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/langserver/cmd"
+	"github.com/opentofu/opentofu-ls/internal/langserver/errors"
+	"github.com/opentofu/opentofu-ls/internal/langserver/progress"
+	"github.com/opentofu/opentofu-ls/internal/terraform/module"
+	"github.com/opentofu/opentofu-ls/internal/uri"
 )
 
 func (h *CmdHandler) TerraformInitHandler(ctx context.Context, args cmd.CommandArgs) (interface{}, error) {

@@ -11,14 +11,14 @@ import (
 	"io/ioutil"
 	"log"
 
-	"github.com/hashicorp/terraform-ls/internal/job"
+	"github.com/opentofu/opentofu-ls/internal/job"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/codes"
 	"go.opentelemetry.io/otel/trace"
 )
 
-const tracerName = "github.com/hashicorp/terraform-ls/internal/scheduler"
+const tracerName = "github.com/opentofu/opentofu-ls/internal/scheduler"
 
 type Scheduler struct {
 	logger      *log.Logger

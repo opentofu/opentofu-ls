@@ -11,9 +11,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/hashicorp/terraform-ls/internal/terraform/datadir"
 	"github.com/mcuadros/go-defaults"
 	"github.com/mitchellh/mapstructure"
+	"github.com/opentofu/opentofu-ls/internal/terraform/datadir"
 )
 
 type ExperimentalFeatures struct {

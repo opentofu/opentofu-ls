@@ -11,7 +11,7 @@ import (
 	"io"
 	"log"
 
-	"github.com/hashicorp/terraform-ls/internal/state"
+	"github.com/opentofu/opentofu-ls/internal/state"
 )
 
 type recordPathCtxKey struct{}

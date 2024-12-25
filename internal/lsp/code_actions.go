@@ -8,7 +8,7 @@ package lsp
 import (
 	"sort"
 
-	lsp "github.com/hashicorp/terraform-ls/internal/protocol"
+	lsp "github.com/opentofu/opentofu-ls/internal/protocol"
 )
 
 const (

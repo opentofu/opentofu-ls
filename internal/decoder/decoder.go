@@ -9,10 +9,10 @@ import (
 	"context"
 
 	"github.com/hashicorp/hcl-lang/decoder"
-	"github.com/hashicorp/terraform-ls/internal/codelens"
-	ilsp "github.com/hashicorp/terraform-ls/internal/lsp"
-	lsp "github.com/hashicorp/terraform-ls/internal/protocol"
-	"github.com/hashicorp/terraform-ls/internal/utm"
+	"github.com/opentofu/opentofu-ls/internal/codelens"
+	ilsp "github.com/opentofu/opentofu-ls/internal/lsp"
+	lsp "github.com/opentofu/opentofu-ls/internal/protocol"
+	"github.com/opentofu/opentofu-ls/internal/utm"
 )
 
 func DecoderContext(ctx context.Context) decoder.DecoderContext {

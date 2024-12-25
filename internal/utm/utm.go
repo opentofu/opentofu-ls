@@ -8,7 +8,7 @@ package utm
 import (
 	"context"
 
-	ilsp "github.com/hashicorp/terraform-ls/internal/lsp"
+	ilsp "github.com/opentofu/opentofu-ls/internal/lsp"
 )
 
 const UtmSource = "terraform-ls"

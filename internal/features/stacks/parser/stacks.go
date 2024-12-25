@@ -9,8 +9,8 @@ import (
 	"path/filepath"
 
 	"github.com/hashicorp/hcl/v2"
-	"github.com/hashicorp/terraform-ls/internal/features/stacks/ast"
-	"github.com/hashicorp/terraform-ls/internal/terraform/parser"
+	"github.com/opentofu/opentofu-ls/internal/features/stacks/ast"
+	"github.com/opentofu/opentofu-ls/internal/terraform/parser"
 )
 
 func ParseFiles(fs parser.FS, stacksPath string) (ast.Files, ast.Diagnostics, error) {

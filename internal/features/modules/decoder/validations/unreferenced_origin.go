@@ -43,14 +43,14 @@ func UnreferencedOrigins(ctx context.Context, pathCtx *decoder.PathContext) lang
 			// We temporarily ignore references with more than 2 segments
 			// as these indicate references to complex types
 			// which we do not fully support yet.
-			// TODO: revisit as part of https://github.com/hashicorp/terraform-ls/issues/653
+			// TODO: revisit as part of https://github.com/opentofu/opentofu-ls/issues/653
 			continue
 		}
 
 		// we only initially validate variables & local values
 		// resources and data sources can have unknown schema
 		// and will be researched at a later point
-		// TODO: revisit as part of https://github.com/hashicorp/terraform-ls/issues/1364
+		// TODO: revisit as part of https://github.com/opentofu/opentofu-ls/issues/1364
 		supported := []string{"var", "local"}
 		firstStep := address[0].String()
 		if !slices.Contains(supported, firstStep) {

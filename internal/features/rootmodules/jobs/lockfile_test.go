@@ -16,12 +16,12 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/hashicorp/go-version"
 	tfjson "github.com/hashicorp/terraform-json"
-	lsctx "github.com/hashicorp/terraform-ls/internal/context"
-	"github.com/hashicorp/terraform-ls/internal/features/rootmodules/state"
-	globalState "github.com/hashicorp/terraform-ls/internal/state"
-	"github.com/hashicorp/terraform-ls/internal/terraform/exec"
-	"github.com/hashicorp/terraform-ls/internal/terraform/module/operation"
 	tfaddr "github.com/hashicorp/terraform-registry-address"
+	lsctx "github.com/opentofu/opentofu-ls/internal/context"
+	"github.com/opentofu/opentofu-ls/internal/features/rootmodules/state"
+	globalState "github.com/opentofu/opentofu-ls/internal/state"
+	"github.com/opentofu/opentofu-ls/internal/terraform/exec"
+	"github.com/opentofu/opentofu-ls/internal/terraform/module/operation"
 	"github.com/stretchr/testify/mock"
 	"github.com/zclconf/go-cty/cty"
 )
@@ -119,7 +119,7 @@ func TestParseProviderVersions_multipleVersions(t *testing.T) {
 		},
 		// These are somewhat awkward two entries
 		// to account for io/fs and our own path separator differences
-		// See https://github.com/hashicorp/terraform-ls/issues/1025
+		// See https://github.com/opentofu/opentofu-ls/issues/1025
 		modPathFirst + "/main.tf": &fstest.MapFile{
 			Data: []byte{},
 		},
@@ -159,7 +159,7 @@ func TestParseProviderVersions_multipleVersions(t *testing.T) {
 		},
 		// These are somewhat awkward two entries
 		// to account for io/fs and our own path separator differences
-		// See https://github.com/hashicorp/terraform-ls/issues/1025
+		// See https://github.com/opentofu/opentofu-ls/issues/1025
 		modPathSecond + "/main.tf": &fstest.MapFile{
 			Data: []byte{},
 		},

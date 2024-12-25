@@ -8,7 +8,7 @@ package document
 import (
 	"bytes"
 
-	"github.com/hashicorp/terraform-ls/internal/source"
+	"github.com/opentofu/opentofu-ls/internal/source"
 )
 
 type Change interface {

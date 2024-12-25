@@ -9,7 +9,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/hashicorp/terraform-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/document"
 )
 
 type ignoreState struct{}

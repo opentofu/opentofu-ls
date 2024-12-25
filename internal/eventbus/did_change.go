@@ -8,7 +8,7 @@ package eventbus
 import (
 	"context"
 
-	"github.com/hashicorp/terraform-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/document"
 )
 
 // DidChangeEvent is an event to signal that a file in directory has changed.

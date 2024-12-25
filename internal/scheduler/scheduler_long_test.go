@@ -14,13 +14,13 @@ import (
 	"sync"
 	"testing"
 
-	lsctx "github.com/hashicorp/terraform-ls/internal/context"
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/job"
-	"github.com/hashicorp/terraform-ls/internal/state"
+	lsctx "github.com/opentofu/opentofu-ls/internal/context"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/job"
+	"github.com/opentofu/opentofu-ls/internal/state"
 )
 
-// See https://github.com/hashicorp/terraform-ls/issues/1065
+// See https://github.com/opentofu/opentofu-ls/issues/1065
 // This test can be very expensive to run in terms of CPU, memory and time.
 // It takes about 3-4 minutes to finish on M1 Pro.
 func TestScheduler_millionJobsQueued(t *testing.T) {

@@ -7,8 +7,8 @@ package lsp
 
 import (
 	"github.com/hashicorp/hcl-lang/lang"
-	"github.com/hashicorp/terraform-ls/internal/mdplain"
-	lsp "github.com/hashicorp/terraform-ls/internal/protocol"
+	"github.com/opentofu/opentofu-ls/internal/mdplain"
+	lsp "github.com/opentofu/opentofu-ls/internal/protocol"
 )
 
 func ToSignatureHelp(signature *lang.FunctionSignature) *lsp.SignatureHelp {
@@ -20,7 +20,7 @@ func ToSignatureHelp(signature *lang.FunctionSignature) *lsp.SignatureHelp {
 	for _, p := range signature.Parameters {
 		parameters = append(parameters, lsp.ParameterInformation{
 			Label: p.Name,
-			// TODO: Support markdown per https://github.com/hashicorp/terraform-ls/issues/1212
+			// TODO: Support markdown per https://github.com/opentofu/opentofu-ls/issues/1212
 			Documentation: mdplain.Clean(p.Description.Value),
 		})
 	}
@@ -29,7 +29,7 @@ func ToSignatureHelp(signature *lang.FunctionSignature) *lsp.SignatureHelp {
 		Signatures: []lsp.SignatureInformation{
 			{
 				Label: signature.Name,
-				// TODO: Support markdown per https://github.com/hashicorp/terraform-ls/issues/1212
+				// TODO: Support markdown per https://github.com/opentofu/opentofu-ls/issues/1212
 				Documentation: mdplain.Clean(signature.Description.Value),
 				Parameters:    parameters,
 			},

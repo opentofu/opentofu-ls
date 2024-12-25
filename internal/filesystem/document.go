@@ -8,7 +8,7 @@ package filesystem
 import (
 	"io/fs"
 
-	"github.com/hashicorp/terraform-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/document"
 )
 
 func documentAsFile(doc *document.Document) fs.File {

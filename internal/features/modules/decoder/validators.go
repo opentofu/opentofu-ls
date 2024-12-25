@@ -7,7 +7,7 @@ package decoder
 
 import (
 	"github.com/hashicorp/hcl-lang/validator"
-	"github.com/hashicorp/terraform-ls/internal/features/modules/decoder/validations"
+	"github.com/opentofu/opentofu-ls/internal/features/modules/decoder/validations"
 )
 
 var moduleValidators = []validator.Validator{

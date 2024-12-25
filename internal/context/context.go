@@ -9,9 +9,9 @@ import (
 	"context"
 	"time"
 
-	"github.com/hashicorp/terraform-ls/internal/langserver/diagnostics"
-	lsp "github.com/hashicorp/terraform-ls/internal/protocol"
-	"github.com/hashicorp/terraform-ls/internal/settings"
+	"github.com/opentofu/opentofu-ls/internal/langserver/diagnostics"
+	lsp "github.com/opentofu/opentofu-ls/internal/protocol"
+	"github.com/opentofu/opentofu-ls/internal/settings"
 )
 
 type contextKey struct {

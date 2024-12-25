@@ -8,7 +8,7 @@ package errors
 import (
 	e "errors"
 
-	"github.com/hashicorp/terraform-ls/internal/terraform/module"
+	"github.com/opentofu/opentofu-ls/internal/terraform/module"
 )
 
 func EnrichTfExecError(err error) error {

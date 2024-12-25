@@ -8,7 +8,7 @@ package mdplain_test
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform-ls/internal/mdplain"
+	"github.com/opentofu/opentofu-ls/internal/mdplain"
 )
 
 func TestClean(t *testing.T) {

@@ -10,7 +10,7 @@ import (
 
 	"github.com/mitchellh/cli"
 
-	"github.com/hashicorp/terraform-ls/internal/cmd"
+	"github.com/opentofu/opentofu-ls/internal/cmd"
 )
 
 func main() {

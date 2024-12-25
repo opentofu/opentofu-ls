@@ -9,8 +9,8 @@ import (
 	"context"
 
 	"github.com/hashicorp/hcl-lang/lang"
-	ilsp "github.com/hashicorp/terraform-ls/internal/lsp"
-	lsp "github.com/hashicorp/terraform-ls/internal/protocol"
+	ilsp "github.com/opentofu/opentofu-ls/internal/lsp"
+	lsp "github.com/opentofu/opentofu-ls/internal/protocol"
 )
 
 func (svc *service) References(ctx context.Context, params lsp.ReferenceParams) ([]lsp.Location, error) {

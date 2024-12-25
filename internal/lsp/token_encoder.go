@@ -9,9 +9,9 @@ import (
 	"bytes"
 
 	"github.com/hashicorp/hcl-lang/lang"
-	"github.com/hashicorp/terraform-ls/internal/lsp/semtok"
-	lsp "github.com/hashicorp/terraform-ls/internal/protocol"
-	"github.com/hashicorp/terraform-ls/internal/source"
+	"github.com/opentofu/opentofu-ls/internal/lsp/semtok"
+	lsp "github.com/opentofu/opentofu-ls/internal/protocol"
+	"github.com/opentofu/opentofu-ls/internal/source"
 )
 
 type TokenEncoder struct {

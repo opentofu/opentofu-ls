@@ -16,7 +16,7 @@ import (
 const (
 	defaultBaseURL = "https://registry.terraform.io"
 	defaultTimeout = 5 * time.Second
-	tracerName     = "github.com/hashicorp/terraform-ls/internal/registry"
+	tracerName     = "github.com/opentofu/opentofu-ls/internal/registry"
 )
 
 type Client struct {

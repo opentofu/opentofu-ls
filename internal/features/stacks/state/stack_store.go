@@ -10,11 +10,11 @@ import (
 
 	"github.com/hashicorp/go-memdb"
 	"github.com/hashicorp/go-version"
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/features/stacks/ast"
-	globalState "github.com/hashicorp/terraform-ls/internal/state"
-	globalAst "github.com/hashicorp/terraform-ls/internal/terraform/ast"
-	"github.com/hashicorp/terraform-ls/internal/terraform/module/operation"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/features/stacks/ast"
+	globalState "github.com/opentofu/opentofu-ls/internal/state"
+	globalAst "github.com/opentofu/opentofu-ls/internal/terraform/ast"
+	"github.com/opentofu/opentofu-ls/internal/terraform/module/operation"
 )
 
 type StackStore struct {

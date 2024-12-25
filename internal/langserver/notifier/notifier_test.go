@@ -14,8 +14,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/state"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/state"
 )
 
 func TestNotifier(t *testing.T) {

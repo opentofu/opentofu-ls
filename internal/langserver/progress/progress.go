@@ -9,8 +9,8 @@ import (
 	"context"
 
 	"github.com/creachadair/jrpc2"
-	lsctx "github.com/hashicorp/terraform-ls/internal/context"
-	lsp "github.com/hashicorp/terraform-ls/internal/protocol"
+	lsctx "github.com/opentofu/opentofu-ls/internal/context"
+	lsp "github.com/opentofu/opentofu-ls/internal/protocol"
 )
 
 func Begin(ctx context.Context, title string) error {

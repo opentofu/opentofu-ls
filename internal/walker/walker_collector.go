@@ -9,7 +9,7 @@ import (
 	"sync"
 
 	"github.com/hashicorp/go-multierror"
-	"github.com/hashicorp/terraform-ls/internal/job"
+	"github.com/opentofu/opentofu-ls/internal/job"
 )
 
 type WalkerCollector struct {

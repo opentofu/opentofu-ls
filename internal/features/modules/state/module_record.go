@@ -9,9 +9,9 @@ import (
 	"github.com/hashicorp/hcl-lang/reference"
 	"github.com/hashicorp/hcl/v2"
 
-	"github.com/hashicorp/terraform-ls/internal/features/modules/ast"
-	globalAst "github.com/hashicorp/terraform-ls/internal/terraform/ast"
-	op "github.com/hashicorp/terraform-ls/internal/terraform/module/operation"
+	"github.com/opentofu/opentofu-ls/internal/features/modules/ast"
+	globalAst "github.com/opentofu/opentofu-ls/internal/terraform/ast"
+	op "github.com/opentofu/opentofu-ls/internal/terraform/module/operation"
 )
 
 // ModuleRecord contains all information about module files

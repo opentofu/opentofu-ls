@@ -12,12 +12,12 @@ import (
 
 	"github.com/hashicorp/hcl-lang/decoder"
 	"github.com/hashicorp/hcl-lang/lang"
-	"github.com/hashicorp/terraform-ls/internal/eventbus"
-	"github.com/hashicorp/terraform-ls/internal/features/modules/jobs"
-	stackDecoder "github.com/hashicorp/terraform-ls/internal/features/stacks/decoder"
-	"github.com/hashicorp/terraform-ls/internal/features/stacks/state"
-	"github.com/hashicorp/terraform-ls/internal/langserver/diagnostics"
-	globalState "github.com/hashicorp/terraform-ls/internal/state"
+	"github.com/opentofu/opentofu-ls/internal/eventbus"
+	"github.com/opentofu/opentofu-ls/internal/features/modules/jobs"
+	stackDecoder "github.com/opentofu/opentofu-ls/internal/features/stacks/decoder"
+	"github.com/opentofu/opentofu-ls/internal/features/stacks/state"
+	"github.com/opentofu/opentofu-ls/internal/langserver/diagnostics"
+	globalState "github.com/opentofu/opentofu-ls/internal/state"
 )
 
 type StacksFeature struct {

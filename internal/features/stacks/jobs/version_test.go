@@ -11,11 +11,11 @@ import (
 	"path/filepath"
 	"testing"
 
-	lsctx "github.com/hashicorp/terraform-ls/internal/context"
-	"github.com/hashicorp/terraform-ls/internal/features/stacks/state"
-	"github.com/hashicorp/terraform-ls/internal/filesystem"
-	globalState "github.com/hashicorp/terraform-ls/internal/state"
-	"github.com/hashicorp/terraform-ls/internal/terraform/module/operation"
+	lsctx "github.com/opentofu/opentofu-ls/internal/context"
+	"github.com/opentofu/opentofu-ls/internal/features/stacks/state"
+	"github.com/opentofu/opentofu-ls/internal/filesystem"
+	globalState "github.com/opentofu/opentofu-ls/internal/state"
+	"github.com/opentofu/opentofu-ls/internal/terraform/module/operation"
 )
 
 func TestLoadTerraformVersion(t *testing.T) {

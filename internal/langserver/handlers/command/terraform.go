@@ -10,9 +10,9 @@ import (
 	"fmt"
 
 	"github.com/creachadair/jrpc2"
-	"github.com/hashicorp/terraform-ls/internal/langserver/cmd"
-	"github.com/hashicorp/terraform-ls/internal/langserver/progress"
-	"github.com/hashicorp/terraform-ls/internal/uri"
+	"github.com/opentofu/opentofu-ls/internal/langserver/cmd"
+	"github.com/opentofu/opentofu-ls/internal/langserver/progress"
+	"github.com/opentofu/opentofu-ls/internal/uri"
 )
 
 const terraformVersionRequestVersion = 0

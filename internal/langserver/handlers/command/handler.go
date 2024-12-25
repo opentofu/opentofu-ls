@@ -8,9 +8,9 @@ package command
 import (
 	"log"
 
-	fmodules "github.com/hashicorp/terraform-ls/internal/features/modules"
-	frootmodules "github.com/hashicorp/terraform-ls/internal/features/rootmodules"
-	"github.com/hashicorp/terraform-ls/internal/state"
+	fmodules "github.com/opentofu/opentofu-ls/internal/features/modules"
+	frootmodules "github.com/opentofu/opentofu-ls/internal/features/rootmodules"
+	"github.com/opentofu/opentofu-ls/internal/state"
 )
 
 type CmdHandler struct {

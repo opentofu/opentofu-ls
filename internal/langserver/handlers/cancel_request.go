@@ -10,7 +10,7 @@ import (
 	"fmt"
 
 	"github.com/creachadair/jrpc2"
-	lsp "github.com/hashicorp/terraform-ls/internal/protocol"
+	lsp "github.com/opentofu/opentofu-ls/internal/protocol"
 )
 
 func CancelRequest(ctx context.Context, params lsp.CancelParams) error {

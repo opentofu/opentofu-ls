@@ -8,15 +8,15 @@ package rootmodules
 import (
 	"context"
 
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/features/rootmodules/ast"
-	"github.com/hashicorp/terraform-ls/internal/features/rootmodules/jobs"
-	"github.com/hashicorp/terraform-ls/internal/job"
-	"github.com/hashicorp/terraform-ls/internal/protocol"
-	"github.com/hashicorp/terraform-ls/internal/terraform/datadir"
-	"github.com/hashicorp/terraform-ls/internal/terraform/exec"
-	op "github.com/hashicorp/terraform-ls/internal/terraform/module/operation"
-	"github.com/hashicorp/terraform-ls/internal/uri"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/features/rootmodules/ast"
+	"github.com/opentofu/opentofu-ls/internal/features/rootmodules/jobs"
+	"github.com/opentofu/opentofu-ls/internal/job"
+	"github.com/opentofu/opentofu-ls/internal/protocol"
+	"github.com/opentofu/opentofu-ls/internal/terraform/datadir"
+	"github.com/opentofu/opentofu-ls/internal/terraform/exec"
+	op "github.com/opentofu/opentofu-ls/internal/terraform/module/operation"
+	"github.com/opentofu/opentofu-ls/internal/uri"
 )
 
 func (f *RootModulesFeature) discover(path string, files []string) error {

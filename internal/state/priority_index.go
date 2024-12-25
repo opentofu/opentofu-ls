@@ -10,7 +10,7 @@ import (
 	"reflect"
 
 	"github.com/hashicorp/go-memdb"
-	"github.com/hashicorp/terraform-ls/internal/job"
+	"github.com/opentofu/opentofu-ls/internal/job"
 )
 
 type JobPriorityIndex struct {

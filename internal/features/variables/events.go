@@ -10,13 +10,13 @@ import (
 	"os"
 	"path/filepath"
 
-	lsctx "github.com/hashicorp/terraform-ls/internal/context"
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/features/variables/ast"
-	"github.com/hashicorp/terraform-ls/internal/features/variables/jobs"
-	"github.com/hashicorp/terraform-ls/internal/job"
-	"github.com/hashicorp/terraform-ls/internal/protocol"
-	op "github.com/hashicorp/terraform-ls/internal/terraform/module/operation"
+	lsctx "github.com/opentofu/opentofu-ls/internal/context"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/features/variables/ast"
+	"github.com/opentofu/opentofu-ls/internal/features/variables/jobs"
+	"github.com/opentofu/opentofu-ls/internal/job"
+	"github.com/opentofu/opentofu-ls/internal/protocol"
+	op "github.com/opentofu/opentofu-ls/internal/terraform/module/operation"
 )
 
 func (f *VariablesFeature) discover(path string, files []string) error {

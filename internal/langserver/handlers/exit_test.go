@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hashicorp/terraform-ls/internal/langserver"
+	"github.com/opentofu/opentofu-ls/internal/langserver"
 )
 
 func TestExit(t *testing.T) {

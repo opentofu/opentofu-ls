@@ -9,7 +9,7 @@ import (
 	"context"
 	"net/url"
 
-	"github.com/hashicorp/terraform-ls/internal/utm"
+	"github.com/opentofu/opentofu-ls/internal/utm"
 )
 
 func docsURL(ctx context.Context, rawURL, utmContent string) (*url.URL, error) {

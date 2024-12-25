@@ -13,11 +13,11 @@ import (
 	"path/filepath"
 	"testing"
 
-	lsctx "github.com/hashicorp/terraform-ls/internal/context"
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/eventbus"
-	"github.com/hashicorp/terraform-ls/internal/filesystem"
-	"github.com/hashicorp/terraform-ls/internal/state"
+	lsctx "github.com/opentofu/opentofu-ls/internal/context"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/eventbus"
+	"github.com/opentofu/opentofu-ls/internal/filesystem"
+	"github.com/opentofu/opentofu-ls/internal/state"
 )
 
 func TestWalker_basic(t *testing.T) {

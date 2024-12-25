@@ -7,8 +7,8 @@ package state
 
 import (
 	"github.com/hashicorp/go-version"
-	"github.com/hashicorp/terraform-ls/internal/terraform/datadir"
-	op "github.com/hashicorp/terraform-ls/internal/terraform/module/operation"
+	"github.com/opentofu/opentofu-ls/internal/terraform/datadir"
+	op "github.com/opentofu/opentofu-ls/internal/terraform/module/operation"
 )
 
 // RootRecord contains all information about a module root path, like

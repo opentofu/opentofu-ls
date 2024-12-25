@@ -8,9 +8,9 @@ package state
 import (
 	"github.com/hashicorp/go-version"
 	"github.com/hashicorp/hcl/v2"
-	"github.com/hashicorp/terraform-ls/internal/features/stacks/ast"
-	globalAst "github.com/hashicorp/terraform-ls/internal/terraform/ast"
-	"github.com/hashicorp/terraform-ls/internal/terraform/module/operation"
+	"github.com/opentofu/opentofu-ls/internal/features/stacks/ast"
+	globalAst "github.com/opentofu/opentofu-ls/internal/terraform/ast"
+	"github.com/opentofu/opentofu-ls/internal/terraform/module/operation"
 )
 
 // StackRecord represents a single stack in the state

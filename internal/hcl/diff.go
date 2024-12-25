@@ -7,8 +7,8 @@ package hcl
 
 import (
 	"github.com/hashicorp/hcl/v2"
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/source"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/source"
 	"github.com/pmezard/go-difflib/difflib"
 )
 

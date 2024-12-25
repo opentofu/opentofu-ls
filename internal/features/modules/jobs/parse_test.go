@@ -10,14 +10,14 @@ import (
 	"path/filepath"
 	"testing"
 
-	lsctx "github.com/hashicorp/terraform-ls/internal/context"
-	"github.com/hashicorp/terraform-ls/internal/features/modules/state"
-	"github.com/hashicorp/terraform-ls/internal/filesystem"
-	"github.com/hashicorp/terraform-ls/internal/job"
-	ilsp "github.com/hashicorp/terraform-ls/internal/lsp"
-	globalState "github.com/hashicorp/terraform-ls/internal/state"
-	"github.com/hashicorp/terraform-ls/internal/terraform/ast"
-	"github.com/hashicorp/terraform-ls/internal/uri"
+	lsctx "github.com/opentofu/opentofu-ls/internal/context"
+	"github.com/opentofu/opentofu-ls/internal/features/modules/state"
+	"github.com/opentofu/opentofu-ls/internal/filesystem"
+	"github.com/opentofu/opentofu-ls/internal/job"
+	ilsp "github.com/opentofu/opentofu-ls/internal/lsp"
+	globalState "github.com/opentofu/opentofu-ls/internal/state"
+	"github.com/opentofu/opentofu-ls/internal/terraform/ast"
+	"github.com/opentofu/opentofu-ls/internal/uri"
 )
 
 func TestParseModuleConfiguration(t *testing.T) {

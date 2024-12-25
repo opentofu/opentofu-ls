@@ -6,7 +6,7 @@
 package ast
 
 import (
-	op "github.com/hashicorp/terraform-ls/internal/terraform/module/operation"
+	op "github.com/opentofu/opentofu-ls/internal/terraform/module/operation"
 )
 
 // DiagnosticSource differentiates different sources of diagnostics.

@@ -9,16 +9,16 @@ import (
 	"context"
 	"path/filepath"
 
-	lsctx "github.com/hashicorp/terraform-ls/internal/context"
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/features/modules/ast"
-	"github.com/hashicorp/terraform-ls/internal/features/modules/parser"
-	"github.com/hashicorp/terraform-ls/internal/features/modules/state"
-	"github.com/hashicorp/terraform-ls/internal/job"
-	ilsp "github.com/hashicorp/terraform-ls/internal/lsp"
-	globalAst "github.com/hashicorp/terraform-ls/internal/terraform/ast"
-	op "github.com/hashicorp/terraform-ls/internal/terraform/module/operation"
-	"github.com/hashicorp/terraform-ls/internal/uri"
+	lsctx "github.com/opentofu/opentofu-ls/internal/context"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/features/modules/ast"
+	"github.com/opentofu/opentofu-ls/internal/features/modules/parser"
+	"github.com/opentofu/opentofu-ls/internal/features/modules/state"
+	"github.com/opentofu/opentofu-ls/internal/job"
+	ilsp "github.com/opentofu/opentofu-ls/internal/lsp"
+	globalAst "github.com/opentofu/opentofu-ls/internal/terraform/ast"
+	op "github.com/opentofu/opentofu-ls/internal/terraform/module/operation"
+	"github.com/opentofu/opentofu-ls/internal/uri"
 )
 
 // ParseModuleConfiguration parses the module configuration,

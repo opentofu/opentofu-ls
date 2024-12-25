@@ -7,8 +7,8 @@ package lsp
 
 import (
 	"github.com/hashicorp/hcl-lang/lang"
-	"github.com/hashicorp/terraform-ls/internal/mdplain"
-	lsp "github.com/hashicorp/terraform-ls/internal/protocol"
+	"github.com/opentofu/opentofu-ls/internal/mdplain"
+	lsp "github.com/opentofu/opentofu-ls/internal/protocol"
 )
 
 func ToCompletionList(candidates lang.Candidates, caps lsp.TextDocumentClientCapabilities) lsp.CompletionList {

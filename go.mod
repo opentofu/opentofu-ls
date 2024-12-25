@@ -1,4 +1,4 @@
-module github.com/hashicorp/terraform-ls
+module github.com/opentofu/opentofu-ls
 
 go 1.22.4
 

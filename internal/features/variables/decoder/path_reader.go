@@ -10,10 +10,10 @@ import (
 
 	"github.com/hashicorp/hcl-lang/decoder"
 	"github.com/hashicorp/hcl-lang/lang"
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/features/variables/state"
-	ilsp "github.com/hashicorp/terraform-ls/internal/lsp"
 	tfmod "github.com/hashicorp/terraform-schema/module"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/features/variables/state"
+	ilsp "github.com/opentofu/opentofu-ls/internal/lsp"
 )
 
 type StateReader interface {

@@ -16,7 +16,7 @@ import (
 	"github.com/hashicorp/go-version"
 	"github.com/hashicorp/terraform-exec/tfexec"
 	tfjson "github.com/hashicorp/terraform-json"
-	"github.com/hashicorp/terraform-ls/internal/logging"
+	"github.com/opentofu/opentofu-ls/internal/logging"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/codes"
@@ -25,7 +25,7 @@ import (
 
 var defaultExecTimeout = 30 * time.Second
 
-const tracerName = "github.com/hashicorp/terraform-ls/internal/terraform/exec"
+const tracerName = "github.com/opentofu/opentofu-ls/internal/terraform/exec"
 
 type ctxKey string
 

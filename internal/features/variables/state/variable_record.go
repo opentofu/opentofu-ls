@@ -8,9 +8,9 @@ package state
 import (
 	"github.com/hashicorp/hcl-lang/reference"
 	"github.com/hashicorp/hcl/v2"
-	"github.com/hashicorp/terraform-ls/internal/features/variables/ast"
-	globalAst "github.com/hashicorp/terraform-ls/internal/terraform/ast"
-	op "github.com/hashicorp/terraform-ls/internal/terraform/module/operation"
+	"github.com/opentofu/opentofu-ls/internal/features/variables/ast"
+	globalAst "github.com/opentofu/opentofu-ls/internal/terraform/ast"
+	op "github.com/opentofu/opentofu-ls/internal/terraform/module/operation"
 )
 
 // VariableRecord contains all information about variable definition files

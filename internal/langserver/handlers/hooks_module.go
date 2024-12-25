@@ -9,11 +9,11 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/hashicorp/terraform-ls/internal/langserver/diagnostics"
-	"github.com/hashicorp/terraform-ls/internal/langserver/notifier"
-	"github.com/hashicorp/terraform-ls/internal/langserver/session"
-	"github.com/hashicorp/terraform-ls/internal/state"
-	"github.com/hashicorp/terraform-ls/internal/telemetry"
+	"github.com/opentofu/opentofu-ls/internal/langserver/diagnostics"
+	"github.com/opentofu/opentofu-ls/internal/langserver/notifier"
+	"github.com/opentofu/opentofu-ls/internal/langserver/session"
+	"github.com/opentofu/opentofu-ls/internal/state"
+	"github.com/opentofu/opentofu-ls/internal/telemetry"
 )
 
 func sendModuleTelemetry(features *Features, telemetrySender telemetry.Sender) notifier.Hook {

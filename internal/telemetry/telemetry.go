@@ -9,8 +9,8 @@ import (
 	"context"
 	"fmt"
 
-	lsp "github.com/hashicorp/terraform-ls/internal/protocol"
 	tfaddr "github.com/hashicorp/terraform-registry-address"
+	lsp "github.com/opentofu/opentofu-ls/internal/protocol"
 )
 
 type Telemetry struct {

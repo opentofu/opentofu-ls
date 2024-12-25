@@ -9,16 +9,16 @@ import (
 	"context"
 	"path/filepath"
 
-	lsctx "github.com/hashicorp/terraform-ls/internal/context"
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/features/stacks/ast"
-	"github.com/hashicorp/terraform-ls/internal/features/stacks/parser"
-	"github.com/hashicorp/terraform-ls/internal/features/stacks/state"
-	"github.com/hashicorp/terraform-ls/internal/job"
-	"github.com/hashicorp/terraform-ls/internal/lsp"
-	globalAst "github.com/hashicorp/terraform-ls/internal/terraform/ast"
-	"github.com/hashicorp/terraform-ls/internal/terraform/module/operation"
-	"github.com/hashicorp/terraform-ls/internal/uri"
+	lsctx "github.com/opentofu/opentofu-ls/internal/context"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/features/stacks/ast"
+	"github.com/opentofu/opentofu-ls/internal/features/stacks/parser"
+	"github.com/opentofu/opentofu-ls/internal/features/stacks/state"
+	"github.com/opentofu/opentofu-ls/internal/job"
+	"github.com/opentofu/opentofu-ls/internal/lsp"
+	globalAst "github.com/opentofu/opentofu-ls/internal/terraform/ast"
+	"github.com/opentofu/opentofu-ls/internal/terraform/module/operation"
+	"github.com/opentofu/opentofu-ls/internal/uri"
 )
 
 // ParseStackConfiguration parses the whole Stack configuration,

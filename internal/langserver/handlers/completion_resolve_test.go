@@ -11,8 +11,8 @@ import (
 	"testing"
 
 	tfjson "github.com/hashicorp/terraform-json"
-	"github.com/hashicorp/terraform-ls/internal/langserver"
-	"github.com/hashicorp/terraform-ls/internal/langserver/session"
+	"github.com/opentofu/opentofu-ls/internal/langserver"
+	"github.com/opentofu/opentofu-ls/internal/langserver/session"
 )
 
 func TestCompletionResolve_withoutInitialization(t *testing.T) {

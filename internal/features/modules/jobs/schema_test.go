@@ -24,15 +24,15 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/hashicorp/go-version"
 	"github.com/hashicorp/hcl-lang/lang"
-	lsctx "github.com/hashicorp/terraform-ls/internal/context"
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/features/modules/state"
-	"github.com/hashicorp/terraform-ls/internal/filesystem"
-	"github.com/hashicorp/terraform-ls/internal/job"
-	"github.com/hashicorp/terraform-ls/internal/registry"
-	globalState "github.com/hashicorp/terraform-ls/internal/state"
 	tfaddr "github.com/hashicorp/terraform-registry-address"
 	tfregistry "github.com/hashicorp/terraform-schema/registry"
+	lsctx "github.com/opentofu/opentofu-ls/internal/context"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/features/modules/state"
+	"github.com/opentofu/opentofu-ls/internal/filesystem"
+	"github.com/opentofu/opentofu-ls/internal/job"
+	"github.com/opentofu/opentofu-ls/internal/registry"
+	globalState "github.com/opentofu/opentofu-ls/internal/state"
 	"github.com/zclconf/go-cty-debug/ctydebug"
 	"github.com/zclconf/go-cty/cty"
 )
@@ -609,7 +609,7 @@ func TestPreloadEmbeddedSchema_basic(t *testing.T) {
 	cfgFS := fstest.MapFS{
 		// These are somewhat awkward double entries
 		// to account for io/fs and our own path separator differences
-		// See https://github.com/hashicorp/terraform-ls/issues/1025
+		// See https://github.com/opentofu/opentofu-ls/issues/1025
 		modPath + "/main.tf": &fstest.MapFile{
 			Data: []byte{},
 		},
@@ -684,7 +684,7 @@ func TestPreloadEmbeddedSchema_unknownProviderOnly(t *testing.T) {
 	cfgFS := fstest.MapFS{
 		// These are somewhat awkward double entries
 		// to account for io/fs and our own path separator differences
-		// See https://github.com/hashicorp/terraform-ls/issues/1025
+		// See https://github.com/opentofu/opentofu-ls/issues/1025
 		modPath + "/main.tf": &fstest.MapFile{
 			Data: []byte{},
 		},
@@ -748,7 +748,7 @@ func TestPreloadEmbeddedSchema_idempotency(t *testing.T) {
 	cfgFS := fstest.MapFS{
 		// These are somewhat awkward two entries
 		// to account for io/fs and our own path separator differences
-		// See https://github.com/hashicorp/terraform-ls/issues/1025
+		// See https://github.com/opentofu/opentofu-ls/issues/1025
 		modPath + "/main.tf": &fstest.MapFile{
 			Data: []byte{},
 		},
@@ -832,7 +832,7 @@ func TestPreloadEmbeddedSchema_raceCondition(t *testing.T) {
 	cfgFS := fstest.MapFS{
 		// These are somewhat awkward two entries
 		// to account for io/fs and our own path separator differences
-		// See https://github.com/hashicorp/terraform-ls/issues/1025
+		// See https://github.com/opentofu/opentofu-ls/issues/1025
 		modPath + "/main.tf": &fstest.MapFile{
 			Data: []byte{},
 		},

@@ -278,7 +278,7 @@ func (s *ProviderSchemaStore) schemaExists(addr tfaddr.Provider, pCons version.C
 			// e.g. custom plugin cache location in combination with 0.12
 			// (where lock files didn't exist) [1], or user-triggered race
 			// condition when the lock file is deleted/created.
-			// [1] See https://github.com/hashicorp/terraform-ls/issues/24
+			// [1] See https://github.com/opentofu/opentofu-ls/issues/24
 			continue
 		}
 

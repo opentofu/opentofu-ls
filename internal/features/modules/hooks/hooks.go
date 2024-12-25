@@ -12,8 +12,8 @@ import (
 	"log"
 
 	"github.com/algolia/algoliasearch-client-go/v3/algolia/search"
-	"github.com/hashicorp/terraform-ls/internal/features/modules/state"
-	"github.com/hashicorp/terraform-ls/internal/registry"
+	"github.com/opentofu/opentofu-ls/internal/features/modules/state"
+	"github.com/opentofu/opentofu-ls/internal/registry"
 )
 
 type Hooks struct {

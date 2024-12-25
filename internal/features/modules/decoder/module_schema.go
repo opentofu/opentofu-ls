@@ -8,9 +8,9 @@ package decoder
 import (
 	"github.com/hashicorp/go-version"
 	"github.com/hashicorp/hcl-lang/schema"
-	"github.com/hashicorp/terraform-ls/internal/features/modules/state"
 	tfmodule "github.com/hashicorp/terraform-schema/module"
 	tfschema "github.com/hashicorp/terraform-schema/schema"
+	"github.com/opentofu/opentofu-ls/internal/features/modules/state"
 )
 
 func schemaForModule(mod *state.ModuleRecord, stateReader CombinedReader) (*schema.BodySchema, error) {

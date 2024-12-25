@@ -11,7 +11,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/hashicorp/terraform-ls/internal/terraform/datadir"
+	"github.com/opentofu/opentofu-ls/internal/terraform/datadir"
 )
 
 func TestDecodeOptions_nil(t *testing.T) {

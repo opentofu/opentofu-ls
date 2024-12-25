@@ -8,7 +8,7 @@ package eventbus
 import (
 	"context"
 
-	"github.com/hashicorp/terraform-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/document"
 )
 
 // DidOpenEvent is an event to signal that a directory is open in the editor

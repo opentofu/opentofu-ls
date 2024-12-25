@@ -7,7 +7,7 @@ package lsp
 
 import (
 	"github.com/hashicorp/hcl/v2"
-	lsp "github.com/hashicorp/terraform-ls/internal/protocol"
+	lsp "github.com/opentofu/opentofu-ls/internal/protocol"
 )
 
 func HCLSeverityToLSP(severity hcl.DiagnosticSeverity) lsp.DiagnosticSeverity {

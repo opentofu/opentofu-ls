@@ -8,8 +8,8 @@ package eventbus
 import (
 	"context"
 
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/protocol"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/protocol"
 )
 
 // ManifestChangeEvent is an event that should be fired whenever the module

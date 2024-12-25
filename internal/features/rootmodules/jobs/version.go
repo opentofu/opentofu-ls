@@ -9,12 +9,12 @@ import (
 	"context"
 
 	"github.com/hashicorp/go-version"
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/features/rootmodules/state"
-	"github.com/hashicorp/terraform-ls/internal/job"
-	"github.com/hashicorp/terraform-ls/internal/terraform/module"
-	op "github.com/hashicorp/terraform-ls/internal/terraform/module/operation"
 	tfaddr "github.com/hashicorp/terraform-registry-address"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/features/rootmodules/state"
+	"github.com/opentofu/opentofu-ls/internal/job"
+	"github.com/opentofu/opentofu-ls/internal/terraform/module"
+	op "github.com/opentofu/opentofu-ls/internal/terraform/module/operation"
 )
 
 // GetTerraformVersion obtains "installed" Terraform version
@@ -55,7 +55,7 @@ func GetTerraformVersion(ctx context.Context, rootStore *state.RootStore, modPat
 	// but there is an edge case with custom plugin location
 	// when this may not be available, so leveraging versions
 	// from "terraform version" accounts for this.
-	// See https://github.com/hashicorp/terraform-ls/issues/24
+	// See https://github.com/opentofu/opentofu-ls/issues/24
 	pVersions := providerVersionsFromTfVersion(pv)
 
 	sErr := rootStore.UpdateTerraformAndProviderVersions(modPath, v, pVersions, err)

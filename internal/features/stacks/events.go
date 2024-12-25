@@ -10,14 +10,14 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/hashicorp/terraform-ls/internal/document"
-	"github.com/hashicorp/terraform-ls/internal/features/stacks/ast"
-	"github.com/hashicorp/terraform-ls/internal/features/stacks/jobs"
-	"github.com/hashicorp/terraform-ls/internal/job"
-	"github.com/hashicorp/terraform-ls/internal/lsp"
-	"github.com/hashicorp/terraform-ls/internal/protocol"
-	globalAst "github.com/hashicorp/terraform-ls/internal/terraform/ast"
-	"github.com/hashicorp/terraform-ls/internal/terraform/module/operation"
+	"github.com/opentofu/opentofu-ls/internal/document"
+	"github.com/opentofu/opentofu-ls/internal/features/stacks/ast"
+	"github.com/opentofu/opentofu-ls/internal/features/stacks/jobs"
+	"github.com/opentofu/opentofu-ls/internal/job"
+	"github.com/opentofu/opentofu-ls/internal/lsp"
+	"github.com/opentofu/opentofu-ls/internal/protocol"
+	globalAst "github.com/opentofu/opentofu-ls/internal/terraform/ast"
+	"github.com/opentofu/opentofu-ls/internal/terraform/module/operation"
 )
 
 func (f *StacksFeature) discover(path string, files []string) error {
