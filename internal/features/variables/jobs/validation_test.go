@@ -10,7 +10,6 @@ import (
 	"path/filepath"
 	"testing"
 
-	tfmod "github.com/hashicorp/terraform-schema/module"
 	lsctx "github.com/opentofu/opentofu-ls/internal/context"
 	"github.com/opentofu/opentofu-ls/internal/document"
 	"github.com/opentofu/opentofu-ls/internal/features/variables/state"
@@ -19,6 +18,7 @@ import (
 	globalState "github.com/opentofu/opentofu-ls/internal/state"
 	"github.com/opentofu/opentofu-ls/internal/terraform/ast"
 	"github.com/opentofu/opentofu-ls/internal/uri"
+	tfmod "github.com/opentofu/opentofu-schema/module"
 )
 
 type ModuleReaderMock struct{}

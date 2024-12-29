@@ -14,10 +14,10 @@ import (
 	"github.com/hashicorp/go-version"
 	"github.com/hashicorp/hcl/v2"
 	"github.com/hashicorp/hcl/v2/hclsyntax"
-	tfmod "github.com/hashicorp/terraform-schema/module"
 	globalState "github.com/opentofu/opentofu-ls/internal/state"
 	"github.com/opentofu/opentofu-ls/internal/terraform/datadir"
 	"github.com/opentofu/opentofu-ls/internal/terraform/module/operation"
+	tfmod "github.com/opentofu/opentofu-schema/module"
 	"github.com/zclconf/go-cty-debug/ctydebug"
 )
 

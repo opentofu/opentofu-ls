@@ -11,13 +11,13 @@ import (
 	"testing"
 
 	"github.com/hashicorp/go-version"
-	tfmod "github.com/hashicorp/terraform-schema/module"
 	lsctx "github.com/opentofu/opentofu-ls/internal/context"
 	"github.com/opentofu/opentofu-ls/internal/features/modules/state"
 	"github.com/opentofu/opentofu-ls/internal/filesystem"
 	ilsp "github.com/opentofu/opentofu-ls/internal/lsp"
 	globalState "github.com/opentofu/opentofu-ls/internal/state"
 	"github.com/opentofu/opentofu-ls/internal/terraform/ast"
+	tfmod "github.com/opentofu/opentofu-schema/module"
 )
 
 type RootReaderMock struct{}

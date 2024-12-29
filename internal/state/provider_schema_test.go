@@ -12,7 +12,7 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/hashicorp/go-version"
 	tfaddr "github.com/hashicorp/terraform-registry-address"
-	tfschema "github.com/hashicorp/terraform-schema/schema"
+	tfschema "github.com/opentofu/opentofu-schema/schema"
 )
 
 func TestStateStore_AddPreloadedSchema_duplicate(t *testing.T) {

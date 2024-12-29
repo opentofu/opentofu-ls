@@ -16,13 +16,13 @@ import (
 	"github.com/hashicorp/hcl/v2/hclparse"
 	"github.com/hashicorp/hcl/v2/hclsyntax"
 	tfaddr "github.com/hashicorp/terraform-registry-address"
-	tfmod "github.com/hashicorp/terraform-schema/module"
 	"github.com/opentofu/opentofu-ls/internal/document"
 	"github.com/opentofu/opentofu-ls/internal/features/modules/ast"
 	globalState "github.com/opentofu/opentofu-ls/internal/state"
 	globalAst "github.com/opentofu/opentofu-ls/internal/terraform/ast"
 	"github.com/opentofu/opentofu-ls/internal/terraform/datadir"
 	"github.com/opentofu/opentofu-ls/internal/terraform/module/operation"
+	tfmod "github.com/opentofu/opentofu-schema/module"
 	"github.com/zclconf/go-cty-debug/ctydebug"
 )
 

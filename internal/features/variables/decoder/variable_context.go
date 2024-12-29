@@ -10,9 +10,9 @@ import (
 	"github.com/hashicorp/hcl-lang/reference"
 	"github.com/hashicorp/hcl-lang/schema"
 	"github.com/hashicorp/hcl/v2"
-	tfschema "github.com/hashicorp/terraform-schema/schema"
 	"github.com/opentofu/opentofu-ls/internal/features/variables/ast"
 	"github.com/opentofu/opentofu-ls/internal/features/variables/state"
+	tfschema "github.com/opentofu/opentofu-schema/schema"
 )
 
 func variablePathContext(mod *state.VariableRecord, moduleReader ModuleReader, useAnySchema bool) (*decoder.PathContext, error) {

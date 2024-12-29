@@ -25,7 +25,6 @@ import (
 	"github.com/hashicorp/go-version"
 	"github.com/hashicorp/hcl-lang/lang"
 	tfaddr "github.com/hashicorp/terraform-registry-address"
-	tfregistry "github.com/hashicorp/terraform-schema/registry"
 	lsctx "github.com/opentofu/opentofu-ls/internal/context"
 	"github.com/opentofu/opentofu-ls/internal/document"
 	"github.com/opentofu/opentofu-ls/internal/features/modules/state"
@@ -33,6 +32,7 @@ import (
 	"github.com/opentofu/opentofu-ls/internal/job"
 	"github.com/opentofu/opentofu-ls/internal/registry"
 	globalState "github.com/opentofu/opentofu-ls/internal/state"
+	tfregistry "github.com/opentofu/opentofu-schema/registry"
 	"github.com/zclconf/go-cty-debug/ctydebug"
 	"github.com/zclconf/go-cty/cty"
 )

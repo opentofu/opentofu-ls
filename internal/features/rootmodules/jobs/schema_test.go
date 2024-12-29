@@ -17,10 +17,10 @@ import (
 	"github.com/hashicorp/hcl/v2"
 	"github.com/hashicorp/hcl/v2/hclsyntax"
 	tfaddr "github.com/hashicorp/terraform-registry-address"
-	tfschema "github.com/hashicorp/terraform-schema/schema"
 	"github.com/opentofu/opentofu-ls/internal/features/rootmodules/state"
 	globalState "github.com/opentofu/opentofu-ls/internal/state"
 	"github.com/opentofu/opentofu-ls/internal/terraform/datadir"
+	tfschema "github.com/opentofu/opentofu-schema/schema"
 	"github.com/zclconf/go-cty-debug/ctydebug"
 )
 

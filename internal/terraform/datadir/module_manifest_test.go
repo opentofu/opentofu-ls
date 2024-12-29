@@ -12,7 +12,7 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/hashicorp/go-version"
-	tfmod "github.com/hashicorp/terraform-schema/module"
+	tfmod "github.com/opentofu/opentofu-schema/module"
 )
 
 func TestParseModuleManifestFromFile(t *testing.T) {

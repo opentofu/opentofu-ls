@@ -21,12 +21,12 @@ import (
 	"github.com/hashicorp/go-version"
 	"github.com/hashicorp/hcl-lang/decoder"
 	"github.com/hashicorp/hcl-lang/lang"
-	tfmod "github.com/hashicorp/terraform-schema/module"
 	lsctx "github.com/opentofu/opentofu-ls/internal/context"
 	fdecoder "github.com/opentofu/opentofu-ls/internal/features/modules/decoder"
 	"github.com/opentofu/opentofu-ls/internal/features/modules/jobs"
 	"github.com/opentofu/opentofu-ls/internal/features/modules/state"
 	globalState "github.com/opentofu/opentofu-ls/internal/state"
+	tfmod "github.com/opentofu/opentofu-schema/module"
 )
 
 type RootReaderMock struct{}

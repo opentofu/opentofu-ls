@@ -13,7 +13,6 @@ import (
 
 	"github.com/hashicorp/go-multierror"
 	tfaddr "github.com/hashicorp/terraform-registry-address"
-	tfmod "github.com/hashicorp/terraform-schema/module"
 	lsctx "github.com/opentofu/opentofu-ls/internal/context"
 	"github.com/opentofu/opentofu-ls/internal/document"
 	"github.com/opentofu/opentofu-ls/internal/features/modules/ast"
@@ -24,6 +23,7 @@ import (
 	globalState "github.com/opentofu/opentofu-ls/internal/state"
 	globalAst "github.com/opentofu/opentofu-ls/internal/terraform/ast"
 	op "github.com/opentofu/opentofu-ls/internal/terraform/module/operation"
+	tfmod "github.com/opentofu/opentofu-schema/module"
 )
 
 func (f *ModulesFeature) discover(path string, files []string) error {

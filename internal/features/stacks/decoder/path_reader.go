@@ -13,10 +13,10 @@ import (
 	"github.com/hashicorp/hcl-lang/lang"
 	"github.com/hashicorp/hcl-lang/reference"
 	"github.com/hashicorp/hcl/v2"
-	stackschema "github.com/hashicorp/terraform-schema/schema"
 	"github.com/opentofu/opentofu-ls/internal/features/stacks/ast"
 	"github.com/opentofu/opentofu-ls/internal/features/stacks/state"
 	ilsp "github.com/opentofu/opentofu-ls/internal/lsp"
+	stackschema "github.com/opentofu/opentofu-schema/schema"
 )
 
 type PathReader struct {

@@ -15,8 +15,6 @@ import (
 	"github.com/hashicorp/go-version"
 	"github.com/hashicorp/hcl-lang/decoder"
 	"github.com/hashicorp/hcl-lang/lang"
-	"github.com/hashicorp/terraform-schema/backend"
-	tfmod "github.com/hashicorp/terraform-schema/module"
 	"github.com/opentofu/opentofu-ls/internal/algolia"
 	"github.com/opentofu/opentofu-ls/internal/document"
 	"github.com/opentofu/opentofu-ls/internal/eventbus"
@@ -28,6 +26,8 @@ import (
 	"github.com/opentofu/opentofu-ls/internal/registry"
 	globalState "github.com/opentofu/opentofu-ls/internal/state"
 	"github.com/opentofu/opentofu-ls/internal/telemetry"
+	"github.com/opentofu/opentofu-schema/backend"
+	tfmod "github.com/opentofu/opentofu-schema/module"
 )
 
 // ModulesFeature groups everything related to modules. Its internal

@@ -8,8 +8,8 @@ package state
 import (
 	"github.com/hashicorp/go-version"
 	tfaddr "github.com/hashicorp/terraform-registry-address"
-	"github.com/hashicorp/terraform-schema/backend"
-	tfmod "github.com/hashicorp/terraform-schema/module"
+	"github.com/opentofu/opentofu-schema/backend"
+	tfmod "github.com/opentofu/opentofu-schema/module"
 )
 
 // ModuleMetadata contains the result of the early decoding of a module,

@@ -10,7 +10,7 @@ import (
 
 	"github.com/hashicorp/go-version"
 	tfaddr "github.com/hashicorp/terraform-registry-address"
-	"github.com/hashicorp/terraform-schema/registry"
+	"github.com/opentofu/opentofu-schema/registry"
 )
 
 type RegistryModuleData struct {

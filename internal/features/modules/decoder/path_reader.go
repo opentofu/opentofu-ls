@@ -12,11 +12,11 @@ import (
 	"github.com/hashicorp/hcl-lang/decoder"
 	"github.com/hashicorp/hcl-lang/lang"
 	tfaddr "github.com/hashicorp/terraform-registry-address"
-	tfmod "github.com/hashicorp/terraform-schema/module"
-	"github.com/hashicorp/terraform-schema/registry"
-	tfschema "github.com/hashicorp/terraform-schema/schema"
 	"github.com/opentofu/opentofu-ls/internal/features/modules/state"
 	ilsp "github.com/opentofu/opentofu-ls/internal/lsp"
+	tfmod "github.com/opentofu/opentofu-schema/module"
+	"github.com/opentofu/opentofu-schema/registry"
+	tfschema "github.com/opentofu/opentofu-schema/schema"
 )
 
 type StateReader interface {

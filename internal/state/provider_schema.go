@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/go-memdb"
 	"github.com/hashicorp/go-version"
 	tfaddr "github.com/hashicorp/terraform-registry-address"
-	tfschema "github.com/hashicorp/terraform-schema/schema"
+	tfschema "github.com/opentofu/opentofu-schema/schema"
 )
 
 type ProviderSchema struct {

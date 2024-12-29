@@ -11,7 +11,6 @@ import (
 
 	"github.com/hashicorp/go-version"
 	tfaddr "github.com/hashicorp/terraform-registry-address"
-	tfmod "github.com/hashicorp/terraform-schema/module"
 	"github.com/opentofu/opentofu-ls/internal/document"
 	"github.com/opentofu/opentofu-ls/internal/eventbus"
 	"github.com/opentofu/opentofu-ls/internal/filesystem"
@@ -21,6 +20,7 @@ import (
 	"github.com/opentofu/opentofu-ls/internal/terraform/exec"
 	"github.com/opentofu/opentofu-ls/internal/uri"
 	"github.com/opentofu/opentofu-ls/internal/walker"
+	tfmod "github.com/opentofu/opentofu-schema/module"
 	"github.com/stretchr/testify/mock"
 )
 

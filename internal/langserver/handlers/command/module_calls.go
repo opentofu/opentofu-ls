@@ -13,9 +13,9 @@ import (
 
 	"github.com/creachadair/jrpc2"
 	tfaddr "github.com/hashicorp/terraform-registry-address"
-	tfmod "github.com/hashicorp/terraform-schema/module"
 	"github.com/opentofu/opentofu-ls/internal/langserver/cmd"
 	"github.com/opentofu/opentofu-ls/internal/uri"
+	tfmod "github.com/opentofu/opentofu-schema/module"
 )
 
 const moduleCallsVersion = 0

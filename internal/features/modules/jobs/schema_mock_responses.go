@@ -8,7 +8,7 @@ package jobs
 import (
 	"github.com/hashicorp/go-version"
 	"github.com/hashicorp/hcl-lang/lang"
-	tfregistry "github.com/hashicorp/terraform-schema/registry"
+	tfregistry "github.com/opentofu/opentofu-schema/registry"
 	"github.com/zclconf/go-cty/cty"
 )
 
