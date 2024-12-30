@@ -55,7 +55,7 @@ func GetTerraformVersion(ctx context.Context, rootStore *state.RootStore, modPat
 	// but there is an edge case with custom plugin location
 	// when this may not be available, so leveraging versions
 	// from "terraform version" accounts for this.
-	// See https://github.com/opentofu/opentofu-ls/issues/24
+	// See https://github.com/hashicorp/terraform-ls/issues/24
 	pVersions := providerVersionsFromTfVersion(pv)
 
 	sErr := rootStore.UpdateTerraformAndProviderVersions(modPath, v, pVersions, err)

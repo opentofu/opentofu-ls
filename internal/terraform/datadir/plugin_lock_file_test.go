@@ -19,7 +19,7 @@ import (
 
 func TestParsePluginVersions_basic012(t *testing.T) {
 	// TODO: Replace OS-specific separator with '/'
-	// See https://github.com/opentofu/opentofu-ls/issues/1025
+	// See https://github.com/hashicorp/terraform-ls/issues/1025
 	fs := fstest.MapFS{
 		"foo-module": &fstest.MapFile{Mode: fs.ModeDir},
 		filepath.Join("foo-module", ".terraform"):                                                                                       &fstest.MapFile{Mode: fs.ModeDir},

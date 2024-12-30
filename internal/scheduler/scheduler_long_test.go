@@ -20,7 +20,7 @@ import (
 	"github.com/opentofu/opentofu-ls/internal/state"
 )
 
-// See https://github.com/opentofu/opentofu-ls/issues/1065
+// See https://github.com/hashicorp/terraform-ls/issues/1065
 // This test can be very expensive to run in terms of CPU, memory and time.
 // It takes about 3-4 minutes to finish on M1 Pro.
 func TestScheduler_millionJobsQueued(t *testing.T) {

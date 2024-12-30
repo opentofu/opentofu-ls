@@ -258,7 +258,7 @@ func (f *ModulesFeature) decodeModule(ctx context.Context, dir document.DirHandl
 	// Changes to a setting currently requires a LS restart, so the LS
 	// setting context cannot change during the execution of a job. That's
 	// why we can extract it here and use it in Defer.
-	// See https://github.com/opentofu/opentofu-ls/issues/1008
+	// See https://github.com/hashicorp/terraform-ls/issues/1008
 	// We can safely ignore the error here. If we can't get the options from
 	// the context, validationOptions.EnableEnhancedValidation will be false
 	// by default. So we don't run the validation jobs.

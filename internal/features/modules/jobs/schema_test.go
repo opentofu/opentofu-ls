@@ -609,7 +609,7 @@ func TestPreloadEmbeddedSchema_basic(t *testing.T) {
 	cfgFS := fstest.MapFS{
 		// These are somewhat awkward double entries
 		// to account for io/fs and our own path separator differences
-		// See https://github.com/opentofu/opentofu-ls/issues/1025
+		// See https://github.com/hashicorp/terraform-ls/issues/1025
 		modPath + "/main.tf": &fstest.MapFile{
 			Data: []byte{},
 		},
@@ -684,7 +684,7 @@ func TestPreloadEmbeddedSchema_unknownProviderOnly(t *testing.T) {
 	cfgFS := fstest.MapFS{
 		// These are somewhat awkward double entries
 		// to account for io/fs and our own path separator differences
-		// See https://github.com/opentofu/opentofu-ls/issues/1025
+		// See https://github.com/hashicorp/terraform-ls/issues/1025
 		modPath + "/main.tf": &fstest.MapFile{
 			Data: []byte{},
 		},
@@ -748,7 +748,7 @@ func TestPreloadEmbeddedSchema_idempotency(t *testing.T) {
 	cfgFS := fstest.MapFS{
 		// These are somewhat awkward two entries
 		// to account for io/fs and our own path separator differences
-		// See https://github.com/opentofu/opentofu-ls/issues/1025
+		// See https://github.com/hashicorp/terraform-ls/issues/1025
 		modPath + "/main.tf": &fstest.MapFile{
 			Data: []byte{},
 		},
@@ -832,7 +832,7 @@ func TestPreloadEmbeddedSchema_raceCondition(t *testing.T) {
 	cfgFS := fstest.MapFS{
 		// These are somewhat awkward two entries
 		// to account for io/fs and our own path separator differences
-		// See https://github.com/opentofu/opentofu-ls/issues/1025
+		// See https://github.com/hashicorp/terraform-ls/issues/1025
 		modPath + "/main.tf": &fstest.MapFile{
 			Data: []byte{},
 		},

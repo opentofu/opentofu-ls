@@ -119,7 +119,7 @@ func TestParseProviderVersions_multipleVersions(t *testing.T) {
 		},
 		// These are somewhat awkward two entries
 		// to account for io/fs and our own path separator differences
-		// See https://github.com/opentofu/opentofu-ls/issues/1025
+		// See https://github.com/hashicorp/terraform-ls/issues/1025
 		modPathFirst + "/main.tf": &fstest.MapFile{
 			Data: []byte{},
 		},
@@ -159,7 +159,7 @@ func TestParseProviderVersions_multipleVersions(t *testing.T) {
 		},
 		// These are somewhat awkward two entries
 		// to account for io/fs and our own path separator differences
-		// See https://github.com/opentofu/opentofu-ls/issues/1025
+		// See https://github.com/hashicorp/terraform-ls/issues/1025
 		modPathSecond + "/main.tf": &fstest.MapFile{
 			Data: []byte{},
 		},
