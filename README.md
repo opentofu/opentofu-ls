@@ -40,9 +40,3 @@ Please refer to [.github/CONTRIBUTING.md](.github/CONTRIBUTING.md) for more info
 - [Martin Atkins](https://github.com/apparentlymart) - particularly the virtual filesystem
 - [Zhe Cheng](https://github.com/njuCZ) - research, design, prototyping assistance
 - [Julio Sueiras](https://github.com/juliosueiras) - particularly his [language server implementation](https://github.com/juliosueiras/terraform-lsp)
-
-## Telemetry
-
-The server will collect data only if the _client_ requests it during initialization. Telemetry is opt-in by default.
-
-[Read more about telemetry](./docs/telemetry.md).

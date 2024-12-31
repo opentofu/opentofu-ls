@@ -9,16 +9,14 @@
 package hooks
 
 import (
+	"github.com/opentofu/opentofu-ls/internal/registry"
 	"log"
 
-	"github.com/algolia/algoliasearch-client-go/v3/algolia/search"
 	"github.com/opentofu/opentofu-ls/internal/features/modules/state"
-	"github.com/opentofu/opentofu-ls/internal/registry"
 )
 
 type Hooks struct {
 	ModStore       *state.ModuleStore
 	RegistryClient registry.Client
-	AlgoliaClient  *search.Client
 	Logger         *log.Logger
 }
