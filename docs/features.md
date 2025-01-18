@@ -94,7 +94,7 @@ curl -s https://microsoft.github.io/language-server-protocol/specifications/lsp/
 | notebookDocument/didClose | ❌ | |
 | notebookDocument/didOpen | ❌ | |
 | notebookDocument/didSave | ❌ | |
-| telemetry/event | ✅ | See [telemetry.md](https://github.com/hashicorp/terraform-ls/blob/main/docs/telemetry.md) |
+| telemetry/event | ❌  | |
 | textDocument/didChange | ✅ | |
 | textDocument/didClose | ✅ | |
 | textDocument/didOpen | ✅ | |

@@ -7,7 +7,6 @@ package rootmodules
 
 import (
 	"context"
-	"fmt"
 	"io"
 	"log"
 
@@ -17,7 +16,6 @@ import (
 	"github.com/opentofu/opentofu-ls/internal/features/rootmodules/jobs"
 	"github.com/opentofu/opentofu-ls/internal/features/rootmodules/state"
 	globalState "github.com/opentofu/opentofu-ls/internal/state"
-	"github.com/opentofu/opentofu-ls/internal/telemetry"
 	"github.com/opentofu/opentofu-ls/internal/terraform/exec"
 	tfmod "github.com/opentofu/opentofu-schema/module"
 )
@@ -152,43 +150,6 @@ func (f *RootModulesFeature) InstalledProviders(modPath string) (map[tfaddr.Prov
 
 func (f *RootModulesFeature) CallersOfModule(modPath string) ([]string, error) {
 	return f.Store.CallersOfModule(modPath)
-}
-
-func (f *RootModulesFeature) Telemetry(path string) map[string]interface{} {
-	properties := make(map[string]interface{})
-
-	record, err := f.Store.RootRecordByPath(path)
-	if err != nil {
-		return properties
-	}
-
-	if record.TerraformVersion != nil {
-		properties["tfVersion"] = record.TerraformVersion.String()
-	}
-	if len(record.InstalledProviders) > 0 {
-		installedProviders := make(map[string]string, 0)
-		for pAddr, pv := range record.InstalledProviders {
-			if telemetry.IsPublicProvider(pAddr) {
-				versionString := ""
-				if pv != nil {
-					versionString = pv.String()
-				}
-				installedProviders[pAddr.String()] = versionString
-				continue
-			}
-
-			// anonymize any unknown providers or the ones not publicly listed
-			id, err := f.stateStore.ProviderSchemas.GetProviderID(pAddr)
-			if err != nil {
-				continue
-			}
-			addr := fmt.Sprintf("unlisted/%s", id)
-			installedProviders[addr] = ""
-		}
-		properties["installedProviders"] = installedProviders
-	}
-
-	return properties
 }
 
 // InstalledModulePath checks the installed modules in the given root module

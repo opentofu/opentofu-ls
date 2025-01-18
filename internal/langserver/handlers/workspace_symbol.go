@@ -19,7 +19,6 @@ func (svc *service) WorkspaceSymbol(ctx context.Context, params lsp.WorkspaceSym
 	}
 
 	// TODO? maybe kick off indexing of the whole workspace here, use ProgressToken
-	// TODO? track in telemetry
 	symbols, err := svc.decoder.Symbols(ctx, params.Query)
 	if err != nil {
 		return nil, err

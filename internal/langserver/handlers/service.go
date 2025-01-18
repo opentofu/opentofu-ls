@@ -36,7 +36,6 @@ import (
 	"github.com/opentofu/opentofu-ls/internal/scheduler"
 	"github.com/opentofu/opentofu-ls/internal/settings"
 	"github.com/opentofu/opentofu-ls/internal/state"
-	"github.com/opentofu/opentofu-ls/internal/telemetry"
 	"github.com/opentofu/opentofu-ls/internal/terraform/discovery"
 	"github.com/opentofu/opentofu-ls/internal/terraform/exec"
 	"github.com/opentofu/opentofu-ls/internal/walker"
@@ -73,7 +72,6 @@ type service struct {
 	tfDiscoFunc    discovery.DiscoveryFunc
 	tfExecFactory  exec.ExecutorFactory
 	tfExecOpts     *exec.ExecutorOpts
-	telemetry      telemetry.Sender
 	decoder        *decoder.Decoder
 	stateStore     *state.StateStore
 	server         session.Server
@@ -103,7 +101,6 @@ func NewSession(srvCtx context.Context) session.Session {
 		stopSession:    stopSession,
 		tfDiscoFunc:    d.LookPath,
 		tfExecFactory:  exec.NewExecutor,
-		telemetry:      &telemetry.NoopSender{},
 		registryClient: registry.NewClient(),
 	}
 }
@@ -123,8 +120,6 @@ func (svc *service) Assigner() (jrpc2.Assigner, error) {
 	if err != nil {
 		return nil, fmt.Errorf("unable to prepare session: %w", err)
 	}
-
-	svc.telemetry = &telemetry.NoopSender{Logger: svc.logger}
 
 	cc := &lsp.ClientCapabilities{}
 
@@ -567,7 +562,6 @@ func (svc *service) configureSessionDependencies(ctx context.Context, cfgOpts *s
 
 	moduleHooks := []notifier.Hook{
 		updateDiagnostics(svc.features, svc.diagsNotifier),
-		sendModuleTelemetry(svc.features, svc.telemetry),
 	}
 
 	cc, err := ilsp.ClientCapabilities(ctx)
@@ -597,16 +591,6 @@ func (svc *service) configureSessionDependencies(ctx context.Context, cfgOpts *s
 	svc.notifier.SetLogger(svc.logger)
 	svc.notifier.Start(svc.sessCtx)
 
-	return nil
-}
-
-func (svc *service) setupTelemetry(version int, notifier session.ClientNotifier) error {
-	t, err := telemetry.NewSender(version, notifier)
-	if err != nil {
-		return err
-	}
-
-	svc.telemetry = t
 	return nil
 }
 

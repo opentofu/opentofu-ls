@@ -11,11 +11,9 @@ import (
 	"io"
 	"log"
 
-	"github.com/algolia/algoliasearch-client-go/v3/algolia/search"
 	"github.com/hashicorp/go-version"
 	"github.com/hashicorp/hcl-lang/decoder"
 	"github.com/hashicorp/hcl-lang/lang"
-	"github.com/opentofu/opentofu-ls/internal/algolia"
 	"github.com/opentofu/opentofu-ls/internal/document"
 	"github.com/opentofu/opentofu-ls/internal/eventbus"
 	fdecoder "github.com/opentofu/opentofu-ls/internal/features/modules/decoder"
@@ -25,8 +23,6 @@ import (
 	"github.com/opentofu/opentofu-ls/internal/langserver/diagnostics"
 	"github.com/opentofu/opentofu-ls/internal/registry"
 	globalState "github.com/opentofu/opentofu-ls/internal/state"
-	"github.com/opentofu/opentofu-ls/internal/telemetry"
-	"github.com/opentofu/opentofu-schema/backend"
 	tfmod "github.com/opentofu/opentofu-schema/module"
 )
 
@@ -172,11 +168,6 @@ func (f *ModulesFeature) AppendCompletionHooks(srvCtx context.Context, decoderCo
 		Logger:         f.logger,
 	}
 
-	credentials, ok := algolia.CredentialsFromContext(srvCtx)
-	if ok {
-		h.AlgoliaClient = search.NewClient(credentials.AppID, credentials.APIKey)
-	}
-
 	decoderContext.CompletionHooks["CompleteLocalModuleSources"] = h.LocalModuleSources
 	decoderContext.CompletionHooks["CompleteRegistryModuleSources"] = h.RegistryModuleSources
 	decoderContext.CompletionHooks["CompleteRegistryModuleVersions"] = h.RegistryModuleVersions
@@ -195,83 +186,6 @@ func (f *ModulesFeature) Diagnostics(path string) diagnostics.Diagnostics {
 	}
 
 	return diags
-}
-
-func (f *ModulesFeature) Telemetry(path string) map[string]interface{} {
-	properties := make(map[string]interface{})
-
-	mod, err := f.Store.ModuleRecordByPath(path)
-	if err != nil {
-		return properties
-	}
-
-	if len(mod.Meta.CoreRequirements) > 0 {
-		properties["tfRequirements"] = mod.Meta.CoreRequirements.String()
-	}
-	if mod.Meta.Cloud != nil {
-		properties["cloud"] = true
-
-		hostname := mod.Meta.Cloud.Hostname
-
-		// https://developer.hashicorp.com/terraform/language/settings/terraform-cloud#usage-example
-		// Required for Terraform Enterprise;
-		// Defaults to app.terraform.io for HCP Terraform
-		if hostname == "" {
-			hostname = "app.terraform.io"
-		}
-
-		// anonymize any non-default hostnames
-		if hostname != "app.terraform.io" {
-			hostname = "custom-hostname"
-		}
-
-		properties["cloud.hostname"] = hostname
-	}
-	if mod.Meta.Backend != nil {
-		properties["backend"] = mod.Meta.Backend.Type
-		if data, ok := mod.Meta.Backend.Data.(*backend.Remote); ok {
-			hostname := data.Hostname
-
-			// https://developer.hashicorp.com/terraform/language/settings/backends/remote#hostname
-			// Defaults to app.terraform.io for HCP Terraform
-			if hostname == "" {
-				hostname = "app.terraform.io"
-			}
-
-			// anonymize any non-default hostnames
-			if hostname != "app.terraform.io" {
-				hostname = "custom-hostname"
-			}
-
-			properties["backend.remote.hostname"] = hostname
-		}
-	}
-	if len(mod.Meta.ProviderRequirements) > 0 {
-		reqs := make(map[string]string, 0)
-		for pAddr, cons := range mod.Meta.ProviderRequirements {
-			if telemetry.IsPublicProvider(pAddr) {
-				reqs[pAddr.String()] = cons.String()
-				continue
-			}
-
-			// anonymize any unknown providers or the ones not publicly listed
-			id, err := f.stateStore.ProviderSchemas.GetProviderID(pAddr)
-			if err != nil {
-				continue
-			}
-			addr := fmt.Sprintf("unlisted/%s", id)
-			reqs[addr] = cons.String()
-		}
-		properties["providerRequirements"] = reqs
-	}
-
-	modId, err := f.Store.GetModuleID(mod.Path())
-	if err != nil {
-		return properties
-	}
-	properties["moduleId"] = modId
-
-	return properties
 }
 
 // MetadataReady checks if a given module exists and if it's metadata has been
