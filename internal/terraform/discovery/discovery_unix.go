@@ -8,4 +8,4 @@
 
 package discovery
 
-const executableName = "opentofu"
+const executableName = "tofu"
