@@ -9,3 +9,4 @@ internal/schemas/data/
 tofu-ls
 tofu-ls.exe
 go.work*
+.tool-versions

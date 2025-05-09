@@ -174,12 +174,12 @@ func TestLangServer_workspaceExecuteCommand_moduleProviders_basic(t *testing.T) 
 				"registry.opentofu.org/hashicorp/aws": {
 					"display_name": "hashicorp/aws",
 					"version_constraint":"1.2.3",
-					"docs_link": "https://registry.opentofu.org/provider/hashicorp/aws/latest?utm_content=workspace%2FexecuteCommand%2Fmodule.providers\u0026utm_source=terraform-ls"
+					"docs_link": "https://registry.opentofu.org/provider/hashicorp/aws/latest"
 				},
 				"registry.opentofu.org/hashicorp/google": {
 					"display_name": "hashicorp/google",
 					"version_constraint": "\u003e= 2.0.0",
-					"docs_link": "https://registry.opentofu.org/provider/hashicorp/google/latest?utm_content=workspace%2FexecuteCommand%2Fmodule.providers\u0026utm_source=terraform-ls"
+					"docs_link": "https://registry.opentofu.org/provider/hashicorp/google/latest"
 				}
 			},
 			"installed_providers":{

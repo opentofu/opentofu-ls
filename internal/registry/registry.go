@@ -14,9 +14,10 @@ import (
 )
 
 const (
-	defaultBaseURL = "https://registry.opentofu.org"
-	defaultTimeout = 5 * time.Second
-	tracerName     = "github.com/opentofu/tofu-ls/internal/registry"
+	defaultBaseURL  = "https://api.opentofu.org"
+	registryBaseURL = "https://registry.opentofu.org"
+	defaultTimeout  = 5 * time.Second
+	tracerName      = "github.com/opentofu/tofu-ls/internal/registry"
 )
 
 type Client struct {
@@ -33,6 +34,19 @@ func NewClient() Client {
 
 	return Client{
 		BaseURL:          defaultBaseURL,
+		Timeout:          defaultTimeout,
+		ProviderPageSize: 100,
+		httpClient:       client,
+	}
+}
+
+func NewRegistryClient() Client {
+	client := cleanhttp.DefaultClient()
+	client.Timeout = defaultTimeout
+	client.Transport = otelhttp.NewTransport(client.Transport)
+
+	return Client{
+		BaseURL:          registryBaseURL,
 		Timeout:          defaultTimeout,
 		ProviderPageSize: 100,
 		httpClient:       client,

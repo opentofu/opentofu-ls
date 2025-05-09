@@ -129,7 +129,7 @@ func TestDocumentLink_withValidData(t *testing.T) {
 							"character": 15
 						}
 					},
-					"target": "https://search.opentofu.org/provider/test/test/latest/?utm_content=documentLink\u0026utm_source=terraform-ls"
+					"target": "https://search.opentofu.org/provider/test/test/latest/"
 				}
 			]
 		}`)

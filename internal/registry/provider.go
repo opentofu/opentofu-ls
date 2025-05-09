@@ -8,109 +8,80 @@ package registry
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
+
+	tfaddr "github.com/opentofu/registry-address"
 )
 
-type pagination struct {
-	NextPage int `json:"next-page"`
-}
-
-type meta struct {
-	Pagination pagination `json:"pagination"`
-}
-
-type registryResponse struct {
-	Data []Provider `json:"data"`
-	Meta meta       `json:"meta"`
-}
-
-type ProviderAttributes struct {
-	Name      string `json:"name"`
-	Namespace string `json:"namespace"`
-}
-
 type Provider struct {
-	ID         string             `json:"id"`
-	Attributes ProviderAttributes `json:"attributes"`
-}
-
-func (c Client) ListProviders(tier string) ([]Provider, error) {
-	var providers []Provider
-	page := 1
-	for page > 0 {
-		url := fmt.Sprintf("%s/v2/providers?page[size]=%d&filter[tier]=%s&page[number]=%d",
-			c.BaseURL, c.ProviderPageSize, tier, page)
-		resp, err := http.Get(url)
-		if err != nil {
-			return nil, err
-		}
-
-		if resp.StatusCode != 200 {
-			bodyBytes, err := ioutil.ReadAll(resp.Body)
-			if err != nil {
-				return nil, err
-			}
-			defer resp.Body.Close()
-			return nil, fmt.Errorf("unexpected response: %s: %s", resp.Status, string(bodyBytes))
-		}
-
-		var response registryResponse
-		err = json.NewDecoder(resp.Body).Decode(&response)
-		if err != nil {
-			return nil, fmt.Errorf("unable to decode response: %w", err)
-		}
-		providers = append(providers, response.Data...)
-		page = response.Meta.Pagination.NextPage
-	}
-	return providers, nil
-}
-
-type ProviderVersionResponse struct {
-	Data     ProviderVersionData `json:"data"`
-	Included []Included          `json:"included"`
-}
-
-type Included struct {
-	Type       string             `json:"type"`
-	Attributes IncludedAttributes `json:"attributes"`
-}
-
-type IncludedAttributes struct {
-	Arch string `json:"arch"`
-	Os   string `json:"os"`
-}
-
-type ProviderVersionData struct {
-	Attributes ProviderVersionAttributes `json:"attributes"`
-}
-
-type ProviderVersionAttributes struct {
+	Addr    string `json:"addr"`
 	Version string `json:"version"`
 }
 
-func (c Client) GetLatestProviderVersion(id string) (*ProviderVersionResponse, error) {
-	url := fmt.Sprintf("%s/v2/providers/%s/provider-versions/latest?include=provider-platforms",
-		c.BaseURL, id)
+type ProviderVersion struct {
+	Version   string                    `json:"version"`
+	Platforms []ProviderVersionPlatform `json:"platforms"`
+}
+
+type ProviderVersionPlatform struct {
+	OS   string `json:"os"`
+	Arch string `json:"arch"`
+}
+
+type providerVersionResponse struct {
+	Versions []ProviderVersion `json:"versions"`
+}
+
+func (c Client) ListProviders() ([]Provider, error) {
+	var providers []Provider
+	url := fmt.Sprintf("%s/top/providers?limit=500", c.BaseURL)
+	fmt.Printf("using URL %s\n", url)
 	resp, err := http.Get(url)
 	if err != nil {
 		return nil, err
 	}
 
 	if resp.StatusCode != 200 {
-		bodyBytes, err := ioutil.ReadAll(resp.Body)
+		bodyBytes, err := io.ReadAll(resp.Body)
 		if err != nil {
 			return nil, err
 		}
 		defer resp.Body.Close()
-
-		return nil, fmt.Errorf("unexpected response %s: %s", resp.Status, string(bodyBytes))
+		return nil, fmt.Errorf("unexpected response: %s: %s", resp.Status, string(bodyBytes))
 	}
 
-	var response ProviderVersionResponse
+	var response []Provider
 	err = json.NewDecoder(resp.Body).Decode(&response)
 	if err != nil {
+		return nil, fmt.Errorf("unable to decode response: %w", err)
+	}
+	providers = append(providers, response...)
+
+	return providers, nil
+}
+
+func (c Client) CheckProviderVersionSupported(pAddr tfaddr.Provider) (*providerVersionResponse, error) {
+	url := fmt.Sprintf("%s/v1/providers/%s/%s/versions", c.BaseURL, pAddr.Namespace, pAddr.Type)
+	fmt.Printf("using URL %s\n", url)
+	resp, err := http.Get(url)
+	if err != nil {
 		return nil, err
+	}
+
+	if resp.StatusCode != 200 {
+		bodyBytes, err := io.ReadAll(resp.Body)
+		if err != nil {
+			return nil, err
+		}
+		defer resp.Body.Close()
+		return nil, fmt.Errorf("unexpected response: %s: %s", resp.Status, string(bodyBytes))
+	}
+
+	var response providerVersionResponse
+	err = json.NewDecoder(resp.Body).Decode(&response)
+	if err != nil {
+		return nil, fmt.Errorf("unable to decode response: %w", err)
 	}
 
 	return &response, nil

@@ -12,14 +12,10 @@ import (
 	"github.com/opentofu/tofu-ls/internal/codelens"
 	ilsp "github.com/opentofu/tofu-ls/internal/lsp"
 	lsp "github.com/opentofu/tofu-ls/internal/protocol"
-	"github.com/opentofu/tofu-ls/internal/utm"
 )
 
 func DecoderContext(ctx context.Context) decoder.DecoderContext {
 	dCtx := decoder.NewDecoderContext()
-	dCtx.UtmSource = utm.UtmSource
-	dCtx.UtmMedium = utm.UtmMedium(ctx)
-	dCtx.UseUtmContent = true
 
 	cc, err := ilsp.ClientCapabilities(ctx)
 	if err == nil {
